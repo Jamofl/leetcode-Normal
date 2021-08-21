@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4c95d23f-b768-42be-bf46-9797d050e4c5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1nXf4ad3jJZkkWDerSCoQHCOuQ3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="DataStructure" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="BackTrack回溯" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.T">
+    <configuration name="BigNumSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Array数组.BigNumSum" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Array数组.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Offer48无重复字符最长子串" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="String.Offer48无重复字符最长子串" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="String.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Q38" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BackTrack回溯.Q38" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BackTrack回溯.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Q47带重复元素的全排列" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BackTrack回溯.Q47带重复元素的全排列" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BackTrack回溯.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="T" />
+      <module name="leetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.T" />
+        <item itemvalue="Application.Offer48无重复字符最长子串" />
+        <item itemvalue="Application.Q47带重复元素的全排列" />
+        <item itemvalue="Application.BigNumSum" />
+        <item itemvalue="Application.Q38" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c95d23f-b768-42be-bf46-9797d050e4c5" name="Default Changelist" comment="" />
+      <created>1611541165498</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611541165498</updated>
+      <workItem from="1611541166887" duration="2049000" />
+      <workItem from="1611711595806" duration="3310000" />
+      <workItem from="1611748940328" duration="2901000" />
+      <workItem from="1611799264217" duration="1610000" />
+      <workItem from="1611841022846" duration="740000" />
+      <workItem from="1611972819720" duration="561000" />
+      <workItem from="1611978448940" duration="8465000" />
+      <workItem from="1612231181502" duration="58000" />
+      <workItem from="1612321088196" duration="4443000" />
+      <workItem from="1612358201470" duration="7059000" />
+      <workItem from="1612525624993" duration="1539000" />
+      <workItem from="1612575015537" duration="2304000" />
+      <workItem from="1612666446959" duration="858000" />
+      <workItem from="1612772947239" duration="5636000" />
+      <workItem from="1612919405188" duration="9151000" />
+      <workItem from="1613384581158" duration="260000" />
+      <workItem from="1613439993286" duration="1884000" />
+      <workItem from="1613477378739" duration="8132000" />
+      <workItem from="1613649129601" duration="3762000" />
+      <workItem from="1613725491438" duration="10841000" />
+      <workItem from="1613808575978" duration="3803000" />
+      <workItem from="1613832855408" duration="1663000" />
+      <workItem from="1613873653199" duration="342000" />
+      <workItem from="1613909383267" duration="484000" />
+      <workItem from="1614003097811" duration="7203000" />
+      <workItem from="1614062738872" duration="795000" />
+      <workItem from="1614084028520" duration="1526000" />
+      <workItem from="1614131913635" duration="6440000" />
+      <workItem from="1614238250087" duration="315000" />
+      <workItem from="1614597688033" duration="643000" />
+      <workItem from="1614770456518" duration="1266000" />
+      <workItem from="1614856301307" duration="4946000" />
+      <workItem from="1614928026881" duration="431000" />
+      <workItem from="1614948311095" duration="2606000" />
+      <workItem from="1614954119718" duration="364000" />
+      <workItem from="1615171845811" duration="880000" />
+      <workItem from="1615200395121" duration="1540000" />
+      <workItem from="1615277253133" duration="1229000" />
+      <workItem from="1615375866634" duration="2967000" />
+      <workItem from="1615427130766" duration="14356000" />
+      <workItem from="1615901262864" duration="4056000" />
+      <workItem from="1616155873699" duration="2741000" />
+      <workItem from="1616384067036" duration="3724000" />
+      <workItem from="1616675931862" duration="340000" />
+      <workItem from="1616832443107" duration="3223000" />
+      <workItem from="1616854328584" duration="4495000" />
+      <workItem from="1617015490615" duration="954000" />
+      <workItem from="1617284064541" duration="511000" />
+      <workItem from="1617534932715" duration="953000" />
+      <workItem from="1617778162476" duration="1758000" />
+      <workItem from="1619075221970" duration="2220000" />
+      <workItem from="1626599583449" duration="1973000" />
+      <workItem from="1628395626089" duration="29000" />
+      <workItem from="1628412125479" duration="55000" />
+      <workItem from="1628413096386" duration="3484000" />
+      <workItem from="1629512836454" duration="262000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1398" height="92" key="GridCell.Tab.0.bottom" timestamp="1629337252296">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="92" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1629337252296" />
+    <state width="1398" height="317" key="GridCell.Tab.0.bottom/0.25.1440.822@0.25.1440.822" timestamp="1628415733993" />
+    <state width="1398" height="92" key="GridCell.Tab.0.center" timestamp="1629337252293">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="92" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1629337252293" />
+    <state width="1398" height="317" key="GridCell.Tab.0.center/0.25.1440.822@0.25.1440.822" timestamp="1628415733987" />
+    <state width="1398" height="92" key="GridCell.Tab.0.left" timestamp="1629337252291">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="92" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1629337252291" />
+    <state width="1398" height="317" key="GridCell.Tab.0.left/0.25.1440.822@0.25.1440.822" timestamp="1628415733985" />
+    <state width="1398" height="92" key="GridCell.Tab.0.right" timestamp="1629337252294">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="92" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1629337252294" />
+    <state width="1398" height="317" key="GridCell.Tab.0.right/0.25.1440.822@0.25.1440.822" timestamp="1628415733992" />
+    <state width="1398" height="317" key="GridCell.Tab.1.bottom" timestamp="1628415733997">
+      <screen x="0" y="25" width="1440" height="822" />
+    </state>
+    <state width="1398" height="191" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1628415683225" />
+    <state width="1398" height="317" key="GridCell.Tab.1.bottom/0.25.1440.822@0.25.1440.822" timestamp="1628415733997" />
+    <state width="1398" height="317" key="GridCell.Tab.1.center" timestamp="1628415733995">
+      <screen x="0" y="25" width="1440" height="822" />
+    </state>
+    <state width="1398" height="191" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1628415683222" />
+    <state width="1398" height="317" key="GridCell.Tab.1.center/0.25.1440.822@0.25.1440.822" timestamp="1628415733995" />
+    <state width="1398" height="317" key="GridCell.Tab.1.left" timestamp="1628415733994">
+      <screen x="0" y="25" width="1440" height="822" />
+    </state>
+    <state width="1398" height="191" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1628415683220" />
+    <state width="1398" height="317" key="GridCell.Tab.1.left/0.25.1440.822@0.25.1440.822" timestamp="1628415733994" />
+    <state width="1398" height="317" key="GridCell.Tab.1.right" timestamp="1628415733996">
+      <screen x="0" y="25" width="1440" height="822" />
+    </state>
+    <state width="1398" height="191" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1628415683223" />
+    <state width="1398" height="317" key="GridCell.Tab.1.right/0.25.1440.822@0.25.1440.822" timestamp="1628415733996" />
+    <state width="1398" height="317" key="GridCell.Tab.2.bottom" timestamp="1628415734001">
+      <screen x="0" y="25" width="1440" height="822" />
+    </state>
+    <state width="1398" height="191" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1628415682681" />
+    <state width="1398" height="317" key="GridCell.Tab.2.bottom/0.25.1440.822@0.25.1440.822" timestamp="1628415734001" />
+    <state width="1398" height="317" key="GridCell.Tab.2.center" timestamp="1628415733999">
+      <screen x="0" y="25" width="1440" height="822" />
+    </state>
+    <state width="1398" height="191" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1628415682677" />
+    <state width="1398" height="317" key="GridCell.Tab.2.center/0.25.1440.822@0.25.1440.822" timestamp="1628415733999" />
+    <state width="1398" height="317" key="GridCell.Tab.2.left" timestamp="1628415733998">
+      <screen x="0" y="25" width="1440" height="822" />
+    </state>
+    <state width="1398" height="191" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1628415682675" />
+    <state width="1398" height="317" key="GridCell.Tab.2.left/0.25.1440.822@0.25.1440.822" timestamp="1628415733998" />
+    <state width="1398" height="317" key="GridCell.Tab.2.right" timestamp="1628415734000">
+      <screen x="0" y="25" width="1440" height="822" />
+    </state>
+    <state width="1398" height="191" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1628415682679" />
+    <state width="1398" height="317" key="GridCell.Tab.2.right/0.25.1440.822@0.25.1440.822" timestamp="1628415734000" />
+    <state x="229" y="86" key="SettingsEditor" timestamp="1628395820984">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1628395820984" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DP动态规划/Q1738.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Q454.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/String/Q132分割回文串2.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/排序算法/BubbleSort.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DP动态规划/Q212矩阵单词搜索.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Array/Q59螺旋矩阵II.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Array/Q152乘积最大子数组.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Q392判断子序列.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Array/Q384打乱数组.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/数据结构/Graph/Q207拓扑排序课程表.java</url>
+          <line>211</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/数据结构/Graph/Q210拓扑排序II.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/排序算法/Test.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/数据结构/DisjointSet/Test.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/数据结构/MyHashMap.java</url>
+          <line>133</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/FindKthLargestQ215.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/数据结构/Trie.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/数据结构/MonotonouosStack/Q503.java</url>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/数据结构/Q164设计LRU.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/数据结构/Tree/Q236lowestCommonAncestor.java</url>
+          <line>181</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BackTrack回溯/Q980不同路径iii.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/数据结构/Tree/Q33二叉树的后序遍历序列.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/数据结构/MonotonouosStack/Q239滑动窗口最大值.java</url>
+          <line>142</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BackTrack回溯/Q46全排列.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/String/Offer48无重复字符最长子串.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/leetcode$BubbleSort.ic" NAME="BubbleSort Coverage Results" MODIFIED="1612504192399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Sorting.*</FILTER>
+    </SUITE>
+  </component>
+</project>
