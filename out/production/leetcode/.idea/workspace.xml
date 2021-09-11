@@ -1,11 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c95d23f-b768-42be-bf46-9797d050e4c5" name="Default Changelist" comment="" />
+    <list default="true" id="4c95d23f-b768-42be-bf46-9797d050e4c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DP动态规划/Offer10i斐波那契.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DP动态规划/Q1049粉碎石头.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DP动态规划/Q1690石子游戏6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DP动态规划/Q416分割等和子集.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DP动态规划/Q494目标和.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DP动态规划/Q877石子游戏.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DP动态规划/Q二维矩阵动规问题.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DP动态规划/Q走楼梯.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DP动态规划/Q零一背包更新版.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Q148链表排序.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/String/Q179数组组合出的最大数.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Offer10ii青蛙跳台阶.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Offer10i斐波那契.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q1049粉碎石头.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q279完全平方数.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q416分割等和子集.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q474一和零_零一背包问题.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q494目标和.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q二维矩阵动规问题.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q走楼梯.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q零一背包更新版.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/Q148链表排序$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/Q148链表排序.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/OFFER22链表中倒数第k个节点$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/OFFER22链表中倒数第k个节点.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Offer24反转链表$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Offer24反转链表.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q138复制带随机指针的链表$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q138复制带随机指针的链表.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q142环形链表$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q142环形链表.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q160相交链表判断交点$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q160相交链表判断交点.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q19删除链表的倒数第k个节点$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q19删除链表的倒数第k个节点.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q203移除链表元素$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q203移除链表元素.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q234回文链表$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q234回文链表.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q23合并K个升序链表$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q23合并K个升序链表$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q23合并K个升序链表.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q328$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/Q328.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/拆分翻转合并链表$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/LinkedList/拆分翻转合并链表.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/TreeTraversal迭代遍历$TreeNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/TreeTraversal迭代遍历.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/TreeTraversal递归遍历$TreeNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/TreeTraversal递归遍历.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/数据结构/LinkedList/Q23合并K个升序链表.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/数据结构/LinkedList/拆分翻转合并链表.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AStar/AStar.java" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/AStar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AStar/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AStar/WeightEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/WeightEdge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackTrack回溯/OFFER13机器人的运动范围.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackTrack回溯/OFFER13机器人的运动范围.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackTrack回溯/Q38.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackTrack回溯/Q38.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackTrack回溯/Q46全排列.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackTrack回溯/Q46全排列.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackTrack回溯/Q980不同路径iii.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackTrack回溯/Q980不同路径iii.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DP动态规划/Offer10青蛙跳台阶.java" beforeDir="false" afterPath="$PROJECT_DIR$/DP动态规划/Offer10ii青蛙跳台阶.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DP动态规划/Q279.java" beforeDir="false" afterPath="$PROJECT_DIR$/DP动态规划/Q279完全平方数.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DP动态规划/Q322零钱兑换.java" beforeDir="false" afterPath="$PROJECT_DIR$/DP动态规划/Q322零钱兑换.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DP动态规划/Q45跳跃游戏2.java" beforeDir="false" afterPath="$PROJECT_DIR$/DP动态规划/Q45跳跃游戏2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DP动态规划/Q474零一背包问题.java" beforeDir="false" afterPath="$PROJECT_DIR$/DP动态规划/Q474一和零_零一背包问题.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/OFFER22链表中倒数第k个节点.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/LinkedList/OFFER22链表中倒数第k个节点.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/Offer24反转链表.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/LinkedList/Offer24反转链表.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/Q138复制带随机指针的链表.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/LinkedList/Q138复制带随机指针的链表.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/Q142环形链表.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/LinkedList/Q142环形链表.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/Q160相交链表判断交点.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/LinkedList/Q160相交链表判断交点.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/Q19删除链表的倒数第k个节点.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/LinkedList/Q19删除链表的倒数第k个节点.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/Q203移除链表元素.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/LinkedList/Q203移除链表元素.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/Q234回文链表.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/LinkedList/Q234回文链表.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/Q328.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/LinkedList/Q328.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q01背包问题.java" beforeDir="false" afterPath="$PROJECT_DIR$/Q01背包问题.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q148.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q179.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Q2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/String/Q140单词拆分2.java" beforeDir="false" afterPath="$PROJECT_DIR$/String/Q140单词拆分2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/AStar/AStar$Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/AStar/AStar$Vertex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/AStar/AStar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/AStar/AStar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/AStar/Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/AStar/Vertex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/AStar/WeightEdge.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/AStar/WeightEdge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/BackTrack回溯/Q980不同路径iii.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/BackTrack回溯/Q980不同路径iii.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Offer10青蛙跳台阶.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Offer10青蛙跳台阶.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q279.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q322零钱兑换.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q322零钱兑换.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q474零一背包问题.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/DP动态规划/Q474零一背包问题.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/OFFER22链表中倒数第k个节点$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/OFFER22链表中倒数第k个节点.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Offer24反转链表$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Offer24反转链表.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q138复制带随机指针的链表$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q138复制带随机指针的链表.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q142环形链表$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q142环形链表.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q160相交链表判断交点$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q160相交链表判断交点.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q19删除链表的倒数第k个节点$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q19删除链表的倒数第k个节点.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q203移除链表元素$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q203移除链表元素.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q234回文链表$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q234回文链表.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q328$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/LinkedList/Q328.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/Q01背包问题.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/Q01背包问题.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/Q148$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/Q148.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/排序算法/QuickSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/排序算法/QuickSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/Q102树的层序遍历.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/Q102树的层序遍历.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/Q103二叉树的锯齿层序遍历.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/Q103二叉树的锯齿层序遍历.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/Q236最近公共祖先$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/Q236最近公共祖先$TreeNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/Q236最近公共祖先.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/Q236最近公共祖先.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/TreeTraversalIter$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/TreeTraversalIter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/TreeTraversalRec$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/数据结构/Tree/TreeTraversalRec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/排序算法/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/排序算法/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/Graph/Q207拓扑排序课程表.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/Graph/Q207拓扑排序课程表.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/Graph/Q210拓扑排序II.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/Graph/Q210拓扑排序II.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/MonotonouosStack/Q239滑动窗口最大值.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/MonotonouosStack/Q239滑动窗口最大值.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/MonotonouosStack/Q907.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/MonotonouosStack/Q907.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/MyTreeMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/MyTreeMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/Q164设计LRU.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/Q164设计LRU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/Tree/Q103二叉树的锯齿层序遍历.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/Tree/Q103二叉树的锯齿层序遍历.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/Tree/Q236最近公共祖先.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/Tree/Q236最近公共祖先.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/Tree/Q297Serialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/Tree/Q297Serialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/Tree/TreeTraversalIter.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/Tree/TreeTraversal迭代遍历.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/Tree/TreeTraversalRec.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/Tree/TreeTraversal递归遍历.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="201" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -15,9 +151,19 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1nXf4ad3jJZkkWDerSCoQHCOuQ3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -41,16 +187,17 @@
       <recent name="DataStructure" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="DP动态规划" />
       <recent name="BackTrack回溯" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.T">
-    <configuration name="BigNumSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Array数组.BigNumSum" />
+  <component name="RunManager" selected="Application.QuickSort">
+    <configuration name="拆分翻转合并链表" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="数据结构.LinkedList.拆分翻转合并链表" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Array数组.*" />
+          <option name="PATTERN" value="数据结构.LinkedList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -58,12 +205,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Offer48无重复字符最长子串" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="String.Offer48无重复字符最长子串" />
+    <configuration name="Q1049粉碎石头" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DP动态规划.Q1049粉碎石头" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="String.*" />
+          <option name="PATTERN" value="DP动态规划.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -71,12 +218,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Q38" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BackTrack回溯.Q38" />
+    <configuration name="Q23合并K个升序链表" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="数据结构.LinkedList.Q23合并K个升序链表" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BackTrack回溯.*" />
+          <option name="PATTERN" value="数据结构.LinkedList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,12 +231,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Q47带重复元素的全排列" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BackTrack回溯.Q47带重复元素的全排列" />
+    <configuration name="Q416分割等和子集" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DP动态规划.Q416分割等和子集" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BackTrack回溯.*" />
+          <option name="PATTERN" value="DP动态规划.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,20 +244,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="T" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="T" />
+    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="排序算法.QuickSort" />
       <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="排序算法.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.T" />
-        <item itemvalue="Application.Offer48无重复字符最长子串" />
-        <item itemvalue="Application.Q47带重复元素的全排列" />
-        <item itemvalue="Application.BigNumSum" />
-        <item itemvalue="Application.Q38" />
+        <item itemvalue="Application.QuickSort" />
+        <item itemvalue="Application.Q1049粉碎石头" />
+        <item itemvalue="Application.拆分翻转合并链表" />
+        <item itemvalue="Application.Q23合并K个升序链表" />
+        <item itemvalue="Application.Q416分割等和子集" />
       </list>
     </recent_temporary>
   </component>
@@ -180,78 +333,103 @@
       <workItem from="1628395626089" duration="29000" />
       <workItem from="1628412125479" duration="55000" />
       <workItem from="1628413096386" duration="3484000" />
-      <workItem from="1629512836454" duration="262000" />
+      <workItem from="1629512836454" duration="38892000" />
+      <workItem from="1630569471908" duration="1671000" />
+      <workItem from="1630830484042" duration="4474000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.py" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="92" key="GridCell.Tab.0.bottom" timestamp="1629337252296">
+    <state x="424" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1629722669891">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="92" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1629337252296" />
-    <state width="1398" height="317" key="GridCell.Tab.0.bottom/0.25.1440.822@0.25.1440.822" timestamp="1628415733993" />
-    <state width="1398" height="92" key="GridCell.Tab.0.center" timestamp="1629337252293">
+    <state x="424" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1629722669891" />
+    <state x="693" y="321" key="#xdebugger.evaluate" timestamp="1629687623200">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="92" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1629337252293" />
-    <state width="1398" height="317" key="GridCell.Tab.0.center/0.25.1440.822@0.25.1440.822" timestamp="1628415733987" />
-    <state width="1398" height="92" key="GridCell.Tab.0.left" timestamp="1629337252291">
+    <state x="693" y="321" key="#xdebugger.evaluate/0.0.1440.900@0.0.1440.900" timestamp="1629687623200" />
+    <state width="1398" height="280" key="GridCell.Tab.0.bottom" timestamp="1630569459659">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="92" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1629337252291" />
-    <state width="1398" height="317" key="GridCell.Tab.0.left/0.25.1440.822@0.25.1440.822" timestamp="1628415733985" />
-    <state width="1398" height="92" key="GridCell.Tab.0.right" timestamp="1629337252294">
+    <state width="1398" height="280" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1630569459659" />
+    <state width="1398" height="194" key="GridCell.Tab.0.bottom/0.25.1440.822@0.25.1440.822" timestamp="1630332938706" />
+    <state width="1398" height="280" key="GridCell.Tab.0.center" timestamp="1630569459658">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="92" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1629337252294" />
-    <state width="1398" height="317" key="GridCell.Tab.0.right/0.25.1440.822@0.25.1440.822" timestamp="1628415733992" />
-    <state width="1398" height="317" key="GridCell.Tab.1.bottom" timestamp="1628415733997">
-      <screen x="0" y="25" width="1440" height="822" />
+    <state width="1398" height="280" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1630569459658" />
+    <state width="1398" height="194" key="GridCell.Tab.0.center/0.25.1440.822@0.25.1440.822" timestamp="1630332938702" />
+    <state width="1398" height="280" key="GridCell.Tab.0.left" timestamp="1630569459657">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="191" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1628415683225" />
-    <state width="1398" height="317" key="GridCell.Tab.1.bottom/0.25.1440.822@0.25.1440.822" timestamp="1628415733997" />
-    <state width="1398" height="317" key="GridCell.Tab.1.center" timestamp="1628415733995">
-      <screen x="0" y="25" width="1440" height="822" />
+    <state width="1398" height="280" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1630569459657" />
+    <state width="1398" height="194" key="GridCell.Tab.0.left/0.25.1440.822@0.25.1440.822" timestamp="1630332938700" />
+    <state width="1398" height="280" key="GridCell.Tab.0.right" timestamp="1630569459659">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="191" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1628415683222" />
-    <state width="1398" height="317" key="GridCell.Tab.1.center/0.25.1440.822@0.25.1440.822" timestamp="1628415733995" />
-    <state width="1398" height="317" key="GridCell.Tab.1.left" timestamp="1628415733994">
-      <screen x="0" y="25" width="1440" height="822" />
+    <state width="1398" height="280" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1630569459659" />
+    <state width="1398" height="194" key="GridCell.Tab.0.right/0.25.1440.822@0.25.1440.822" timestamp="1630332938704" />
+    <state width="1398" height="280" key="GridCell.Tab.1.bottom" timestamp="1630569459662">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="191" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1628415683220" />
-    <state width="1398" height="317" key="GridCell.Tab.1.left/0.25.1440.822@0.25.1440.822" timestamp="1628415733994" />
-    <state width="1398" height="317" key="GridCell.Tab.1.right" timestamp="1628415733996">
-      <screen x="0" y="25" width="1440" height="822" />
+    <state width="1398" height="280" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1630569459662" />
+    <state width="1398" height="266" key="GridCell.Tab.1.bottom/0.25.1440.822@0.25.1440.822" timestamp="1629690081399" />
+    <state width="1398" height="280" key="GridCell.Tab.1.center" timestamp="1630569459661">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="191" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1628415683223" />
-    <state width="1398" height="317" key="GridCell.Tab.1.right/0.25.1440.822@0.25.1440.822" timestamp="1628415733996" />
-    <state width="1398" height="317" key="GridCell.Tab.2.bottom" timestamp="1628415734001">
-      <screen x="0" y="25" width="1440" height="822" />
+    <state width="1398" height="280" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1630569459661" />
+    <state width="1398" height="266" key="GridCell.Tab.1.center/0.25.1440.822@0.25.1440.822" timestamp="1629690081398" />
+    <state width="1398" height="280" key="GridCell.Tab.1.left" timestamp="1630569459660">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="191" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1628415682681" />
-    <state width="1398" height="317" key="GridCell.Tab.2.bottom/0.25.1440.822@0.25.1440.822" timestamp="1628415734001" />
-    <state width="1398" height="317" key="GridCell.Tab.2.center" timestamp="1628415733999">
-      <screen x="0" y="25" width="1440" height="822" />
+    <state width="1398" height="280" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1630569459660" />
+    <state width="1398" height="266" key="GridCell.Tab.1.left/0.25.1440.822@0.25.1440.822" timestamp="1629690081397" />
+    <state width="1398" height="280" key="GridCell.Tab.1.right" timestamp="1630569459662">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="191" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1628415682677" />
-    <state width="1398" height="317" key="GridCell.Tab.2.center/0.25.1440.822@0.25.1440.822" timestamp="1628415733999" />
-    <state width="1398" height="317" key="GridCell.Tab.2.left" timestamp="1628415733998">
-      <screen x="0" y="25" width="1440" height="822" />
+    <state width="1398" height="280" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1630569459662" />
+    <state width="1398" height="266" key="GridCell.Tab.1.right/0.25.1440.822@0.25.1440.822" timestamp="1629690081399" />
+    <state width="1398" height="280" key="GridCell.Tab.2.bottom" timestamp="1630569459665">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="191" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1628415682675" />
-    <state width="1398" height="317" key="GridCell.Tab.2.left/0.25.1440.822@0.25.1440.822" timestamp="1628415733998" />
-    <state width="1398" height="317" key="GridCell.Tab.2.right" timestamp="1628415734000">
-      <screen x="0" y="25" width="1440" height="822" />
+    <state width="1398" height="280" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1630569459665" />
+    <state width="1398" height="266" key="GridCell.Tab.2.bottom/0.25.1440.822@0.25.1440.822" timestamp="1629690081402" />
+    <state width="1398" height="280" key="GridCell.Tab.2.center" timestamp="1630569459664">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="191" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1628415682679" />
-    <state width="1398" height="317" key="GridCell.Tab.2.right/0.25.1440.822@0.25.1440.822" timestamp="1628415734000" />
+    <state width="1398" height="280" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1630569459664" />
+    <state width="1398" height="266" key="GridCell.Tab.2.center/0.25.1440.822@0.25.1440.822" timestamp="1629690081401" />
+    <state width="1398" height="280" key="GridCell.Tab.2.left" timestamp="1630569459663">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="280" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1630569459663" />
+    <state width="1398" height="266" key="GridCell.Tab.2.left/0.25.1440.822@0.25.1440.822" timestamp="1629690081400" />
+    <state width="1398" height="280" key="GridCell.Tab.2.right" timestamp="1630569459664">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="280" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1630569459664" />
+    <state width="1398" height="266" key="GridCell.Tab.2.right/0.25.1440.822@0.25.1440.822" timestamp="1629690081401" />
     <state x="229" y="86" key="SettingsEditor" timestamp="1628395820984">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1628395820984" />
+    <state x="334" y="66" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1629515871280">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="334" y="66" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900@0.0.1440.900" timestamp="1629515871280" />
+    <state x="505" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629533638407">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="505" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1629533638407" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1630895135998">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1630895135998" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -341,18 +519,13 @@
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/数据结构/Q164设计LRU.java</url>
-          <line>124</line>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/数据结构/Tree/Q236lowestCommonAncestor.java</url>
           <line>181</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/BackTrack回溯/Q980不同路径iii.java</url>
-          <line>56</line>
+          <line>74</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -380,12 +553,60 @@
           <line>48</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/T.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BackTrack回溯/Q980不同路径iii.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BackTrack回溯/Q980不同路径iii.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DP动态规划/Q零一背包更新版.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DP动态规划/Q494目标和.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DP动态规划/Q494目标和.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Q148链表排序.java</url>
+          <line>194</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DP动态规划/Q416分割等和子集.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DP动态规划/Q1049粉碎石头.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/leetcode$BubbleSort.ic" NAME="BubbleSort Coverage Results" MODIFIED="1612504192399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Sorting.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/leetcode$Q.ic" NAME="Q零一背包更新版 Coverage Results" MODIFIED="1629686847046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>DP动态规划.*</FILTER>
     </SUITE>
   </component>
 </project>

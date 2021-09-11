@@ -187,7 +187,7 @@ public class Q207拓扑排序课程表 {
     }
 
     public boolean bfs(){
-        Queue<Integer> q = new LinkedList<>();
+        Queue<Integer> q = new 数据结构.LinkedList<>();
         for (int i = 0; i < numCourses; i ++){
             if (indegrees[i] == 0)
                 q.offer(i);

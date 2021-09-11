@@ -32,7 +32,7 @@ public class Q980不同路径iii {
         return ans;
     }
 
-    public void dfs(int remain, int[][] grid, int i, int j, int targetI, int targetJ){
+    public void dfsright(int remain, int[][] grid, int i, int j, int targetI, int targetJ){
         if (i == targetI && j== targetJ && remain ==  -1){
             ans += 1;
             return;
@@ -51,9 +51,27 @@ public class Q980不同路径iii {
         }
     }
 
+    public void dfs(int remain, int[][] grid, int i, int j, int targetI, int targetJ){
+        if (remain == -1 && i == targetI && j == targetJ){
+            ans ++;
+            return;
+        }
+        for (int k = 0; k <= 3; k ++){
+            int newI = i + X[k];
+            int newJ = j + Y[k];
+            if (newI >= 0 && newI <= grid.length - 1 && newJ >= 0 && newJ <= grid[0].length - 1 && (grid[newI][newJ] == 0 || grid[newI][newJ] == 2)){
+                grid[newI][newJ] = 1;
+                dfs(remain - 1, grid, newI, newJ, targetI, targetJ);
+                grid[newI][newJ] = 0;
+            }
+        }
+    }
+
     public static void main(String[] args){
         Q980不同路径iii q = new Q980不同路径iii();
         int[][] gird = new int[][] {{1, 0 ,0 ,0}, {0,0,0,0}, {0,0,0,2}};
+        int[][] gird2 = new int[][] {{1, 0 }, {2,0}};
+
         System.out.println(q.uniquePathsIII(gird));
     }
 }

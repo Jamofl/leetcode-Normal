@@ -52,7 +52,7 @@ public class Q239滑动窗口最大值 {
 //        int max = Integer.MIN_VALUE;
 //        int[] ans = new int[n - k + 1];
 //
-//        LinkedList<Integer> subList = new LinkedList<>();
+//        数据结构.LinkedList<Integer> subList = new 数据结构.LinkedList<>();
 //
 //        for(int i = 0; i < k; i ++)
 //            subList.add(nums[i]);

@@ -177,7 +177,7 @@ public class Q297Serialize {
 
 
 //        String[] arr = new String[]{"d", "b", "a", "a"};
-//        LinkedList<String> lst = new LinkedList<>(Arrays.asList(arr));
+//        数据结构.LinkedList<String> lst = new 数据结构.LinkedList<>(Arrays.asList(arr));
 //        Stream<String> stream = lst.stream();
 //        stream.distinct().forEach(System.out::print);
 //        Map<Integer, Integer> map = Stream.of(1,2,3).map(x -> x + 1).collect(Collectors.toMap(x ->x, x -> x+1));

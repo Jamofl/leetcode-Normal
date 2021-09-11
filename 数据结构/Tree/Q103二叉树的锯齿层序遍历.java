@@ -29,11 +29,11 @@ public class Q103二叉树的锯齿层序遍历 {
     /*
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         if (root == null)
-            return new LinkedList<>();
+            return new 数据结构.LinkedList<>();
         List<List<Integer>> ans = new ArrayList<>();
-        Deque<TreeNode> deque = new LinkedList<>();
+        Deque<TreeNode> deque = new 数据结构.LinkedList<>();
         deque.offer(root);
-        LinkedList<Integer> path = new LinkedList<>();
+        数据结构.LinkedList<Integer> path = new 数据结构.LinkedList<>();
         boolean fromLeft = true;
 
         while (deque.size() != 0){
@@ -62,7 +62,7 @@ public class Q103二叉树的锯齿层序遍历 {
             }
 
             fromLeft = !fromLeft;
-            ans.add(new LinkedList<>(path));
+            ans.add(new 数据结构.LinkedList<>(path));
             path.clear();
         }
         return ans;

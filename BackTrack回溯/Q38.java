@@ -19,7 +19,7 @@ public class Q38 {
 
     // solution 1 正常回溯  通过set集合来去重
     /*
-    List<String> ans = new 数据结构.LinkedList<>();
+    List<String> ans = new 数据结构.数据结构.LinkedList<>();
     public String[] permutation(String s) {
         boolean[] isSearched = new boolean[s.length()];
         Arrays.fill(isSearched, false);

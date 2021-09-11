@@ -72,13 +72,13 @@ public class Q210拓扑排序II {
     // 每队列有元素移除时，将该元素加入到拓扑排序的结果中。
     List<List<Integer>> adajcentList;
     int[] indegrees;
-    LinkedList<Integer> lst;
+    数据结构.LinkedList<Integer> lst;
     int numCourses;
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         this.numCourses = numCourses;
         this.adajcentList = new ArrayList<List<Integer>>(numCourses);
         this.indegrees = new int[numCourses];
-        this.lst = new LinkedList<>();
+        this.lst = new 数据结构.LinkedList<>();
         int[] ans = new int[numCourses];
 
         for (int i = 0; i < numCourses; i ++){
@@ -101,7 +101,7 @@ public class Q210拓扑排序II {
     }
 
     public boolean bfs(){
-        Queue<Integer> q = new LinkedList<>();
+        Queue<Integer> q = new 数据结构.LinkedList<>();
         for (int i = 0; i < numCourses; i ++){
             if (indegrees[i] == 0)
                 q.offer(i);

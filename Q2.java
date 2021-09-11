@@ -39,7 +39,7 @@ public class Q2 {
         System.out.println(maxAmount(nums, 5));
 
 
-//        LinkedList<Integer> lst = new LinkedList<>();
+//        数据结构.LinkedList<Integer> lst = new 数据结构.LinkedList<>();
 //        lst.add(1);
 //        lst.add(3);
 //        lst.add(0);

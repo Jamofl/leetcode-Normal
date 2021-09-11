@@ -1,10 +1,7 @@
 package AStar;
-import edu.princeton.cs.algs4.Edge;
 
-import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
-import java.lang.management.GarbageCollectorMXBean;
-import java.security.spec.ECGenParameterSpec;
 import java.util.*;
+
 public class AStar {
     private class Vertex {
         public double weight;
@@ -16,7 +13,9 @@ public class AStar {
         }
     }
 
+    // 到某个顶点的最短距离
     public Map<Vertex, Double> DistTo;
+    // 到某个顶点的最优上一跳节点
     public Map<Vertex, Vertex> EdgeTo;
 
 
@@ -24,7 +23,7 @@ public class AStar {
         this.DistTo = new HashMap<>();
         this.EdgeTo = new HashMap<>();
 
-
+        //根据顶点的权重排列的pq
         PriorityQueue<Vertex> pq = new PriorityQueue<>((Vertex v1, Vertex v2) -> (int)(v1.weight - v2.weight));
         src.weight = graph.estimateDistanceToGoal(src, dst);
         pq.add(src);
@@ -44,6 +43,7 @@ public class AStar {
                 if (DistTo.get(to) == null || DistTo.get(from) + weight < DistTo.get(to)){
                     DistTo.put(to, DistTo.get(from) + weight);
                     EdgeTo.put(to, from);
+                    // 距离目标节点的估计距离
                     double h = graph.estimateDistanceToGoal(to, dst);
                     if (!pq.contains(to)){
                         to.weight = DistTo.get(to) + h;

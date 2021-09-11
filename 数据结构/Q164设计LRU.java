@@ -41,6 +41,13 @@ lRUCache.get(4);    // 返回 4
  */
 package 数据结构;
 import java.util.*;
+
+/**
+ *  【思路】双向链表 + hashmap结构；
+ *   双向链表头部尾部各有一个哑结点，用来表示最远未使用的节点 和 最近使用过的节点
+ *   hashmap用来存储integer -> node的映射关系
+ *   定义一个帮助函数，moveToLast，即每次调用put get方法后，都调用moveToLast方法将该节点移至链表末尾，表明他是最新的
+ */
 public class Q164设计LRU {
     private class Node{
         public int key;
@@ -61,11 +68,11 @@ public class Q164设计LRU {
         }
     }
 
-    public Map<Integer, Node> map;
+    public Map<Integer, Node> map; //用来存储每个int值对应的node
     public int capacity;
     public int size;
-    public Node first;
-    public Node last;
+    public Node first; // 虚拟头部哑结点
+    public Node last;  // 虚拟尾部哑结点
 
     public Q164设计LRU(int capacity) {
         this.size = 0;
@@ -86,6 +93,7 @@ public class Q164设计LRU {
     }
 
     public void put(int key, int value) {
+        // 如果容量超了 先删除
         if (this.size >= this.capacity){
             map.remove(this.first.next.key);
             this.first.next.next.pre = this.first;
@@ -93,12 +101,14 @@ public class Q164设计LRU {
             this.size --;
         }
 
+        // 更新 并移动至末尾
         if (map.containsKey(key)){
             Node target = map.get(key);
             target.val = value;
             moveToLast(target);
             return;
         }
+        // 插入 到末尾
         else {
             Node cur = new Node(key, value, this.last.pre, this.last);
             this.last.pre.next = cur;
@@ -109,6 +119,7 @@ public class Q164设计LRU {
         this.size ++;
     }
 
+    // 把最近操作过的节点都移到last
     private void moveToLast(Node target){
         target.pre.next = target.next;
         target.next.pre = target.pre;

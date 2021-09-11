@@ -89,8 +89,8 @@ public class Q236最近公共祖先 {
     public TreeNode ROOT;
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         this.ROOT = root;
-        LinkedList<TreeNode> path1 = new LinkedList();
-        LinkedList<TreeNode> path2 = new LinkedList();
+        数据结构.LinkedList<TreeNode> path1 = new 数据结构.LinkedList();
+        数据结构.LinkedList<TreeNode> path2 = new 数据结构.LinkedList();
         findNode(path1, root, p);
         findNode(path2, root, q);
         //System.out.println(path1);
@@ -103,7 +103,7 @@ public class Q236最近公共祖先 {
         return ROOT;
     }
 
-    private boolean findNode(LinkedList<TreeNode> path, TreeNode root, TreeNode target){
+    private boolean findNode(数据结构.LinkedList<TreeNode> path, TreeNode root, TreeNode target){
         if (root == null)
             return false;
         else if (target.equals(root)){
@@ -163,7 +163,7 @@ public class Q236最近公共祖先 {
     }
 
     // 状态一定要定义对！
-    // 假设leftPQ rightPQ表示左子树或者右子树中含有P或Q
+    // 假设leftPQ/rightPQ 表示左子树或者右子树中含有P或Q
     private boolean dfs(TreeNode root, TreeNode p, TreeNode q){
         if (root == null)
             return false;

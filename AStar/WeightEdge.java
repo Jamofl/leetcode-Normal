@@ -1,5 +1,9 @@
 package AStar;
 
+/**
+ * 带有权重的边
+ * @param <Vertex>
+ */
 public class WeightEdge<Vertex> {
     public Vertex from;
     public Vertex to;

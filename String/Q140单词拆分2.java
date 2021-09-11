@@ -52,8 +52,8 @@ public class Q140单词拆分2 {
     public List<String> wordBreak(String s, List<String> wordDict) {
         this.set = new HashSet<>(wordDict);
         this.n = s.length();
-        ans = new LinkedList<>();
-        LinkedList<String> path = new LinkedList<>();
+        ans = new 数据结构.LinkedList<>();
+        数据结构.LinkedList<String> path = new 数据结构.LinkedList<>();
 
         // check if there is an answer
         boolean[] dp = new boolean[n]; // s(0, i)可以被拆分
@@ -72,18 +72,18 @@ public class Q140单词拆分2 {
         // 2. dfs 并且 转换格式
         if (dp[n - 1]){
             dfs(ans, path, s, 0);
-            List<String> toReturn = new LinkedList<>();
+            List<String> toReturn = new 数据结构.LinkedList<>();
             for (List lst : ans){
                 toReturn.add(String.join(" ", lst));
             }
             return toReturn;
         }
-        return new LinkedList<String>();
+        return new 数据结构.LinkedList<String>();
     }
 
-    public void dfs(List<List<String>> ans, LinkedList<String> path, String s, int start){
+    public void dfs(List<List<String>> ans, 数据结构.LinkedList<String> path, String s, int start){
         if (start == n){
-            ans.add(new LinkedList<>(path));
+            ans.add(new 数据结构.LinkedList<>(path));
             return;
         }
         int j = start;

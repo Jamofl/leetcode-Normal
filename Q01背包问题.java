@@ -4,7 +4,6 @@
  */
 public class Q01背包问题 {
 
-
     public static int[] values = new int[] {1,2,1};
     public static int[] weights = new int[] {2,1,1};
     public static int[][] cache;
@@ -62,9 +61,7 @@ public class Q01背包问题 {
 
         for (int i = start; i < item; i ++){
             if (weights[i] <= capacity){
-                sum = sum + values[i];
-                dfs( capacity - weights[i], i + 1, sum);
-                sum = sum - values[i];
+                dfs( capacity - weights[i], i + 1, sum + values[i]);
             }
         }
     }

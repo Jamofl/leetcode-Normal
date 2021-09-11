@@ -29,8 +29,8 @@ public class Q907 {
     // Solution 1: 按照len从1 2 3 ...递增，通过单调栈枚举每个子数组中的最小元素，会超时。
     // 复杂度为 O(N2)
 //    public int sumSubarrayMins(int[] arr) {
-//        LinkedList<Integer> q = new LinkedList();
-//        LinkedList<Integer> ans = new LinkedList();
+//        数据结构.LinkedList<Integer> q = new 数据结构.LinkedList();
+//        数据结构.LinkedList<Integer> ans = new 数据结构.LinkedList();
 //        int sumMin = 0;
 //        int maxSubLen = arr.length;
 //        int MOD = 1_000_000_007;
@@ -74,7 +74,7 @@ public class Q907 {
 //
 //    }
 //
-//    private void offer(LinkedList<Integer> q, int[] arr, int k){
+//    private void offer(数据结构.LinkedList<Integer> q, int[] arr, int k){
 //        while (q.size() != 0 && arr[k] < arr[q.getLast()])
 //            q.removeLast();
 //        q.addLast(k);

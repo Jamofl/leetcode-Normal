@@ -29,7 +29,7 @@ public class Q46全排列 {
         nums[j] = temp;
     }
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> ans = new LinkedList<>();
+        List<List<Integer>> ans = new 数据结构.LinkedList<>();
         Integer[] numsInteger = new Integer[nums.length];
         for (int i = 0; i < nums.length; i ++)
             numsInteger[i] = nums[i];
@@ -39,7 +39,7 @@ public class Q46全排列 {
 
     private void dfs(Integer[] nums, List<List<Integer>>ans, int index){
         if (index == nums.length){
-            ans.add(new LinkedList(Arrays.asList(nums)));
+            ans.add(new 数据结构.LinkedList(Arrays.asList(nums)));
             return;
         }
         for(int j = index; j < nums.length; j ++){

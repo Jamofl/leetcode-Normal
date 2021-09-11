@@ -1,6 +1,10 @@
 package 排序算法;
 
+import java.util.Random;
+
 public class QuickSort {
+    // 快排最差情况下可能退化为n2  即 当数组已经几乎排好序时，每次pivot都会选择第一个元素，都是最小的元素，本质上成了冒泡排序
+    public static Random r = new Random();
 
     private int[] swap(int[] nums, int i, int j){
         if (i == j)
@@ -14,6 +18,9 @@ public class QuickSort {
     public void quickSort(int[] nums, int start, int end){
         if (end <= start)
             return;
+        // 随机生成生成一个下标 作为我们的pivot 把它移动到队首
+        int randomIndex = r.nextInt(end - start + 1) + start;
+        swap(nums, start, randomIndex);
         int pivot = nums[start];
 
         int i = start + 1;
@@ -42,5 +49,7 @@ public class QuickSort {
 //        QuickSort q = new QuickSort();
 //        int[] nums = new int[]{5,1,1,2,0,0};
 //        q.quickSort(nums, 0 , nums.length - 1);
+        for (int i = 0; i < 10; i ++)
+            System.out.println(r.nextInt(2));
     }
 }
