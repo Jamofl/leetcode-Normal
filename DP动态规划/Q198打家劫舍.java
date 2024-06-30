@@ -30,7 +30,12 @@ package DP动态规划;
 
 import java.util.Arrays;
 
-public class Q198 {
+
+/**
+ * 转移方程 dp[i] = Math.max(dp[i] + dp[i - 2], dp[i - 1]);
+ * https://leetcode.cn/problems/house-robber/?envType=study-plan-v2&envId=top-100-liked
+ */
+public class Q198打家劫舍 {
     public int rob(int[] nums) {
         if (nums.length == 1)
             return nums[0];

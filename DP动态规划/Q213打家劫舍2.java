@@ -29,33 +29,33 @@ package DP动态规划;
 
 import java.util.Arrays;
 
-public class Q213 {
+public class Q213打家劫舍2 {
     public int rob(int[] nums) {
-        if (nums.length == 1)
+        int n = nums.length;
+
+        if (n == 1){
             return nums[0];
-        else if (nums.length == 0)
-            return 0;
-        else if (nums.length == 2)
-            return Math.max(nums[0], nums[1]);
-        int[] nums1 = new int[nums.length - 1];
-        int[] nums2 = new int[nums.length - 1];
-        System.arraycopy(nums, 0, nums1, 0, nums1.length);
-        System.arraycopy(nums, 1, nums2, 0, nums2.length);
-        return Math.max(robSimple(nums1), robSimple(nums2));
+        }
+
+        int[] nums2 = new int[n - 1];
+        int[] nums3 = new int[n - 1];
+        System.arraycopy(nums, 0, nums2, 0, n - 1);
+        System.arraycopy(nums, 1, nums3, 0, n - 1);
+        return Math.max(robHelper(nums2), robHelper(nums3));
     }
 
-    public int robSimple(int[] nums) {
-        if (nums.length == 1)
+    public int robHelper(int[] nums) {
+        int n = nums.length;
+        if (n == 1) {
             return nums[0];
-        if (nums.length == 0)
-            return 0;
-
-        int[] dp = Arrays.copyOf(nums, nums.length);
+        }
+        // n >= 2
+        int[] dp = new int[n];
         dp[0] = nums[0];
         dp[1] = Math.max(nums[0], nums[1]);
-        for(int i = 2; i < nums.length; i ++){
-            dp[i] = Math.max(dp[i] + dp[i - 2], dp[i - 1]);
+        for (int i = 2; i < n; i++) {
+            dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]);
         }
-        return dp[nums.length - 1];
+        return dp[n - 1];
     }
 }

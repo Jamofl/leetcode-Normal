@@ -27,20 +27,19 @@ cost[i] 将会是一个整型数据，范围为 [0, 999] 。
  */
 package DP动态规划;
 
-public class Q746 {
+public class Q746最小代价爬楼梯 {
+
 
     // 时间O(n)  空间O(n)
     public int minCostClimbingStairs(int[] cost) {
         int n = cost.length;
-        // if (n == 1)
-        //     return cost[0];
-        // if (n == 2)
-        //     return Math.min(cost[0], cost[1]);
-        int[] dp = new int[n + 1];
+        int[] re = new int[n + 1];
+        re[0] = 0;
+        re[1] = 0;
         for (int i = 2; i <= n; i ++){
-            dp[i] = Math.min(dp[i - 1] + cost[i - 1], dp[i - 2] + cost[i - 2]);
+            re[i] = Math.min(re[i - 1] + cost[i - 1], re[i - 2] + cost[i - 2]);
         }
-        return dp[n];
+        return re[n];
     }
 
     // 使用滚动数组进行优化

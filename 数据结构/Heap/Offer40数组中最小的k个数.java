@@ -9,7 +9,6 @@ public class Offer40数组中最小的k个数 {
         // 大顶堆
         PriorityQueue<Integer> pq = new PriorityQueue<>((x, y) -> y - x);
 
-        PriorityQueue<Integer> pq2 = new PriorityQueue<>((Integer x, Integer y) -> y - x);
 
 
         for (int i = 0; i < k; i ++){

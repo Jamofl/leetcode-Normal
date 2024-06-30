@@ -21,7 +21,7 @@ public class MergeSort {
         mergeSort(nums, start, middle); // sort left
         mergeSort(nums, middle + 1, end); // sort right
 
-        // merge sorted left part and right part
+        // merge sorted-left part and sorted-right part
         int i = start;      // 左半边的起点
         int j = middle + 1; // 右半边的起点
         int index = start;

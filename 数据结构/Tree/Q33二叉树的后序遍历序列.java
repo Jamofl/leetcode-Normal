@@ -33,6 +33,7 @@ public class Q33二叉树的后序遍历序列 {
             return true;
 
         int middle = end;
+        // 前半部分都比根小
         for (int i = start; i < end; i ++){
             if (postorder[i] > postorder[end]){
                 middle = i;
@@ -40,6 +41,7 @@ public class Q33二叉树的后序遍历序列 {
             }
         }
 
+        // 后半部分都比根大
         for (int j = middle; j < end; j ++){
             if (postorder[j] < postorder[end])
                 return false;

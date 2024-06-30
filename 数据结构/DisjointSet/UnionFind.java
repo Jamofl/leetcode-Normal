@@ -58,6 +58,5 @@ public class UnionFind {
         unionfind.union(1,4);
         int r = unionfind.find(3);
         r = unionfind.find(1);
-
     }
 }

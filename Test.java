@@ -2,39 +2,40 @@ import java.util.*;
 
 
 public class Test {
-    public int[] maxSlidingWindow(int[] nums, int k) {
-        int l = 0;
-        int r = 0;
+
+    public int rob(int[] nums) {
         int n = nums.length;
-        int[] ans = new int[n - k + 1];
-        LinkedList<Integer> q = new LinkedList(); // queue里面存的是元素的下标
-
-        while (r < k){
-            offer(q, nums, nums[r]);
-            r ++;
+        if (n == 1) {
+            return nums[0];
         }
-        ans[l] = q.getFirst();
-
-        while(r <= n - 1){
-            if (nums[l] == q.getFirst())
-                q.removeFirst();
-            offer(q, nums, nums[r]);
-            r ++;
-            l ++;
-            ans[l] = q.getFirst();
+        if (n == 2) {
+            return Math.max(nums[0], nums[1]);
         }
-        return ans;
+        // n >= 3
+        int[] dp = new int[n];
+        dp[0] = nums[0];
+        dp[1] = Math.max(nums[0], nums[1]);
+        for (int i = 2; i < n; i++) {
+            dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]);
+        }
+        return dp[n - 1];
     }
 
-    private void offer(LinkedList<Integer> lst, int[] nums, int n){
-        while(lst.size() != 0 && lst.getLast() < n){
-            lst.removeLast();
-        }
-        lst.add(n);
+    public int rob2(int[] nums){
+        int n = nums.length;
+        int[] nums2 = new int[n - 1];
+        int[] nums3 = new int[n - 1];
+        System.arraycopy(nums, 0, nums2, 0, n - 1);
+        System.arraycopy(nums, 1, nums3, 0, n - 1);
+        return Math.max(rob(nums2), rob(nums3));
+
     }
-    public static void main(String[] args){
-        Test t = new Test();
-        int[] r = t.maxSlidingWindow(new int[] {1,3,1,2,0,5}, 3);
-        System.out.println(Arrays.toString(r));
+
+    public static void main(String[] args) {
+        Test test = new Test();
+        int re = test.rob2(new int[]{2,3,2});
+        System.out.println(re);
+
     }
+
 }

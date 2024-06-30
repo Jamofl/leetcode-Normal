@@ -124,7 +124,21 @@ public class Q450删除节点 {
 //        return delete(root, key);
 //    }
 
-    //Solution 2:
+    //
+
+    /**
+     * Solution 2
+     * key > root.val 找右子树
+     * key < root.val 找左子树
+     * key = root.val 删除
+     *      左为空 直接用右子节点代替当前节点
+     *      右为空 直接用左子节点代替当前节点
+     *      二者都不为空 取前驱 或 后继节点代替当前节点
+     * @param root
+     * @return
+     */
+
+
     // return the predecessor of the root ——》 左子树的最右节点
     private TreeNode findPredecessor(TreeNode root){
         TreeNode temp = root.left;
@@ -149,15 +163,6 @@ public class Q450删除节点 {
         else if (key < root.val)
             root.left = deleteNode(root.left, key);
         else{
-//            if (root.left == null && root.right == null) // 叶子节点，返回null
-//                return null;
-//            if (root.right == null) // 右为空，返回左
-//                return root.left;
-//            if (root.right != null){ // 右不为空，返回后继节点
-//                 int successorVal = findSuccessor(root).val;
-//                 root = deleteNode(root, successorVal);
-//                 root.val = successorVal;
-//            }
             if (root.left == null)
                 return root.right;
             else if (root.right == null)

@@ -1,5 +1,6 @@
 package 排序算法;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class QuickSort {
@@ -18,7 +19,8 @@ public class QuickSort {
     public void quickSort(int[] nums, int start, int end){
         if (end <= start)
             return;
-        // 随机生成生成一个下标 作为我们的pivot 把它移动到队首
+        // 随机生成生成一个下标 作为我们的pivot 把它移动到队首.
+        // 如果每次都默认选择第一个元素，在极端情况下(如数组本身就是排好序的)，时间复杂度会退化成O（N2）
         int randomIndex = r.nextInt(end - start + 1) + start;
         swap(nums, start, randomIndex);
         int pivot = nums[start];
@@ -27,10 +29,10 @@ public class QuickSort {
         int j = end;
         while (i <= j) {
             // 左指针只接受比它小的元素
-            if (nums[i] < pivot)
+            if (nums[i] <= pivot)
                 i ++;
             // 右指针只接受比它大的元素
-            else if(nums[j] > pivot)
+            else if(nums[j] >= pivot)
                 j --;
             // 如果左右指针都停下了 交换
             else{
@@ -39,6 +41,8 @@ public class QuickSort {
                 j --;
             }
         }
+        // [start, …… , j, i, …… , end]
+        // 至此，从start + 1 ~ j的元素都小于pivot， i ~ end都大于pivot。所以要交换start和j
         swap(nums, start, j); // swap pivot and element at j
         // 虽然左边的元素都比pivot小，右边的元素都比pivot大，但不能保证这些元素之间的相对顺序 所以需要递归的对左右部分再进行快排
         quickSort(nums, start, j - 1);
@@ -46,10 +50,13 @@ public class QuickSort {
     }
 
     public static void main(String[] args){
-//        QuickSort q = new QuickSort();
-//        int[] nums = new int[]{5,1,1,2,0,0};
-//        q.quickSort(nums, 0 , nums.length - 1);
-        for (int i = 0; i < 10; i ++)
-            System.out.println(r.nextInt(2));
+        QuickSort q = new QuickSort();
+        int[] nums = new int[]{5,1,1,2,0,0};
+        q.quickSort(nums, 0 , nums.length - 1);
+        for (int i : nums){
+            System.out.print(i + ",");
+        }
+//        for (int i = 0; i < 10; i ++)
+//            System.out.println(r.nextInt(2));
     }
 }
