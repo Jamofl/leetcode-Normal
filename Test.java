@@ -3,39 +3,68 @@ import java.util.*;
 
 public class Test {
 
-    public int rob(int[] nums) {
-        int n = nums.length;
-        if (n == 1) {
-            return nums[0];
+
+    // 状态转移方程 f(n) = min(f(i) + 1)   i = (1, 2 ... sqrt(n))
+//    for (int j = 1; j <= (int) Math.sqrt(n); j ++){
+//        f[n] = Math.min(f[n], f(n - j * j) + 1);
+
+
+    /**
+     * 8
+     * 1 2
+     * 8 - 4 = 4
+     *
+     * 10
+     * 1 2 3
+     * 10 - 1 = 9
+     * 10 - 4 = 5
+     * 10 - 9 = 1
+     * @param n
+     * @return
+     */
+    Set<Integer> squares = new HashSet<>();
+    public int numSquares(int n) {
+        for (int j = 1; j <= (int) Math.sqrt(n); j ++){
+            squares.add(j * j);
         }
-        if (n == 2) {
-            return Math.max(nums[0], nums[1]);
+        for (int k = 1; k <= n; k ++){
+            if (numSquareHelper(n , k)){
+                return k;
+            }
         }
-        // n >= 3
-        int[] dp = new int[n];
-        dp[0] = nums[0];
-        dp[1] = Math.max(nums[0], nums[1]);
-        for (int i = 2; i < n; i++) {
-            dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]);
-        }
-        return dp[n - 1];
+        return 0;
+
     }
 
-    public int rob2(int[] nums){
-        int n = nums.length;
-        int[] nums2 = new int[n - 1];
-        int[] nums3 = new int[n - 1];
-        System.arraycopy(nums, 0, nums2, 0, n - 1);
-        System.arraycopy(nums, 1, nums3, 0, n - 1);
-        return Math.max(rob(nums2), rob(nums3));
+    public boolean numSquareHelper(int n, int k){
+        if (k == 1){
+           if (squares.contains(n)){
+               return true;
+           }
+           else{
+               return false;
+           }
+        }
+       else {
+           for (int square : squares){
+               if (numSquareHelper(n - square, k - 1)){
+                   return true;
+               }
+           }
+           return false;
+       }
+    }
 
+    public boolean isSquare(int n) {
+        if ((int)Math.sqrt(n) * (int)Math.sqrt(n) == n) {
+            return true;
+        }
+        return false;
     }
 
     public static void main(String[] args) {
         Test test = new Test();
-        int re = test.rob2(new int[]{2,3,2});
-        System.out.println(re);
-
+        System.out.println(test.numSquares(12));
     }
 
 }
