@@ -31,12 +31,11 @@ strs[i] 仅由 '0' 和 '1' 组成
 package DP动态规划;
 
 public class Q474一和零_零一背包问题 {
-
-    // 方法1 dfs回溯遍历  思路正确 但存储cache仍有问题  有少部分案例无法通过
+    // 方法0 dfs回溯遍历  思路正确 但存储cache仍有问题  有少部分案例无法通过  后面有空再看
     int len;
     int ans;
     int[][][] cache;
-    public int findMaxForm(String[] strs, int m, int n) {
+    public int findMaxForm0(String[] strs, int m, int n) {
         this.len = strs.length;
         this.ans = 0;
         this.cache = new int[len + 1][m + 1][n + 1];
@@ -77,6 +76,56 @@ public class Q474一和零_零一背包问题 {
         ans = Math.max(ans, count);
         cache[start][m][n] = Math.max(ans, cache[start][m][n]);
         ans = Math.max(ans, cache[start][m][n]);
+    }
+
+
+    // 方法1 递归法+备忘录
+    // 本质和动态规划一样 把状态转移方程列出来 从f(n-1) 推导出 f(n)
+    public int findMaxForm(String[] strs, int m, int n) {
+        Integer[][][] cache = new Integer[strs.length + 1][m + 1][n + 1];
+        return findMaxFormRec(strs, strs.length, m, n, cache);
+    }
+
+    public int findMaxFormRec(String[] strs, int item, int m, int n, Integer[][][] cache) {
+        if (cache[item][m][n] != null) {
+            return cache[item][m][n];
+        }
+        Integer re = 0;
+        if (item == 0 || (m == 0 && n == 0)) {
+            re = 0;
+        } else {
+            // 不去当前物品
+            if (m < count0(strs[item - 1]) || n < count1(strs[item - 1])) {
+                re = findMaxFormRec(strs, item - 1, m, n, cache);
+            }
+            // 取当前物品
+            else {
+                re = Math.max(findMaxFormRec(strs, item - 1, m, n, cache),
+                        1 + findMaxFormRec(strs, item - 1, m - count0(strs[item - 1]), n - count1(strs[item - 1]), cache));
+            }
+        }
+        cache[item][m][n] = re;
+        return re;
+    }
+
+    public int count0(String str) {
+        int count = 0;
+        for (char c : str.toCharArray()) {
+            if (c == '0') {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public int count1(String str) {
+        int count = 0;
+        for (char c : str.toCharArray()) {
+            if (c == '1') {
+                count++;
+            }
+        }
+        return count;
     }
 
     // 方法2 动态规划

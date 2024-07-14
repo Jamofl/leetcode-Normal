@@ -1,70 +1,84 @@
+import java.text.DateFormatSymbols;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 public class Test {
 
-
-    // 状态转移方程 f(n) = min(f(i) + 1)   i = (1, 2 ... sqrt(n))
-//    for (int j = 1; j <= (int) Math.sqrt(n); j ++){
-//        f[n] = Math.min(f[n], f(n - j * j) + 1);
-
-
     /**
-     * 8
-     * 1 2
-     * 8 - 4 = 4
-     *
-     * 10
-     * 1 2 3
-     * 10 - 1 = 9
-     * 10 - 4 = 5
-     * 10 - 9 = 1
-     * @param n
-     * @return
+     * 对于矩阵中的每一个字符 循环遍历该字符上下左右的元素 校验和当前word的首位字符是否匹配
+     * 结束条件: word长度校验完毕 返回成功 其余均返回失败
      */
-    Set<Integer> squares = new HashSet<>();
-    public int numSquares(int n) {
-        for (int j = 1; j <= (int) Math.sqrt(n); j ++){
-            squares.add(j * j);
-        }
-        for (int k = 1; k <= n; k ++){
-            if (numSquareHelper(n , k)){
-                return k;
+
+
+    // 初始化一个数组用于遍历
+    public int[][] arounds = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+
+    public boolean exist(char[][] board, String word) {
+        int m = board.length;
+        int n = board[0].length;
+        boolean[][] visit = new boolean[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                // 避免了初始化的情况 直接进入dfs方法中判断 (首次访问 边界条件和是否访问直接满足 无需校验)
+                if (dfs(board, word, visit, 0, i, j)) {
+                    return true;
+                }
             }
-        }
-        return 0;
-
-    }
-
-    public boolean numSquareHelper(int n, int k){
-        if (k == 1){
-           if (squares.contains(n)){
-               return true;
-           }
-           else{
-               return false;
-           }
-        }
-       else {
-           for (int square : squares){
-               if (numSquareHelper(n - square, k - 1)){
-                   return true;
-               }
-           }
-           return false;
-       }
-    }
-
-    public boolean isSquare(int n) {
-        if ((int)Math.sqrt(n) * (int)Math.sqrt(n) == n) {
-            return true;
         }
         return false;
     }
 
+    /**
+     * 整体逻辑:
+     *      对本次dfs 直接判断字符是否匹配
+     *      对下次dfs 提现判断数组边界和是否访问
+     *
+     * 简历一个本次dfs和下次dfs流程化的模板 然后把初始化的情况套进来 不要特判初始化的情况
+     *      兼容i == 0 j == 0的初始化讨论 让第一次也可以套用dfs循环的模板
+     *      对于第一次，相当于直接满足边界和是否访问的校验
+     *
+     * ==>
+     * @param board
+     * @param word
+     * @param visit
+     * @param index
+     * @param curI
+     * @param curJ
+     * @return
+     */
+    public boolean dfs(char[][] board, String word, boolean[][] visit, int index, int curI, int curJ) {
+        if (board[curI][curJ] != word.charAt(index)){
+            return false;
+        }
+        if (index == word.length() - 1) {
+            return true;
+        }
+
+        visit[curI][curJ] = true;
+        for (int[] around : arounds) {
+            int newI = curI + around[0];
+            int newJ = curJ + around[1];
+            // 校验边界 校验访问
+            if (newI >= 0 && newI <= board.length - 1 && newJ >= 0 && newJ <= board[0].length - 1
+                    && !visit[newI][newJ]) {
+                if (dfs(board, word, visit, index + 1, newI, newJ)) {
+                    return true;
+                }
+            }
+        }
+        visit[curI][curJ] = false;
+        return false;
+    }
+
+
     public static void main(String[] args) {
+        char[][] board = {{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
         Test test = new Test();
-        System.out.println(test.numSquares(12));
+        boolean see = test.exist(board, "SEE");
+        System.out.println(see);
+
     }
 
 }

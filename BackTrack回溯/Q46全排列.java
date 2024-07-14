@@ -19,8 +19,10 @@ package BackTrack回溯;
 import java.util.*;
 
 public class Q46全排列 {
-    /*
-    // Solution 1: 使用交换的方法，一次交换第一个元素和第二个、第三个...元素，dfs后回退，还原交换位置。 当交换的下标到达数组长度时，将数组加入答案中
+
+    // Solution 1: 使用交换的方法，一次交换第一个元素和第二个、第三个...元素，dfs后回退，还原交换位置。
+    // 当交换的下标到达数组长度时，将数组加入答案中
+    // 不是很好理解 推荐常规的回溯方法
     private void swap(Integer[] nums, int i, int j) {
         if (i == j)
             return;
@@ -29,7 +31,7 @@ public class Q46全排列 {
         nums[j] = temp;
     }
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> ans = new 数据结构.LinkedList<>();
+        List<List<Integer>> ans = new LinkedList<>();
         Integer[] numsInteger = new Integer[nums.length];
         for (int i = 0; i < nums.length; i ++)
             numsInteger[i] = nums[i];
@@ -39,7 +41,7 @@ public class Q46全排列 {
 
     private void dfs(Integer[] nums, List<List<Integer>>ans, int index){
         if (index == nums.length){
-            ans.add(new 数据结构.LinkedList(Arrays.asList(nums)));
+            ans.add(new LinkedList(Arrays.asList(nums)));
             return;
         }
         for(int j = index; j < nums.length; j ++){
@@ -48,9 +50,15 @@ public class Q46全排列 {
             swap(nums, index ,j);
         }
     }
+
+
+    /**
+     * 方法2 常规解法 : dfs + 回溯法
+     * 通过构建一个树形图  遍历所有的解法
+     * https://leetcode.cn/problems/permutations/solutions/9914/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/?envType=study-plan-v2&envId=top-100-liked
      */
     List<List<Integer>> ans = new ArrayList<>();
-    public List<List<Integer>> permute(int[] nums) {
+    public List<List<Integer>> permute2(int[] nums) {
         int n = nums.length;
         LinkedList<Integer> path = new LinkedList<>();
         boolean[] visit = new boolean[n];

@@ -22,7 +22,7 @@
 package BackTrack回溯;
 
 import java.util.*;
-public class Q22 {
+public class Q22括号生成 {
     public List<String> generateParenthesis(int n) {
 
         LinkedList<String> ans = new LinkedList<>();
@@ -32,6 +32,15 @@ public class Q22 {
         return ans;
     }
 
+    /**
+     * 可以加(的情况 : left > 0 即可
+     * 可以加)的情况 : right > 0
+     *               && left < right(即剩余的左括号数量小于右括号 说明消耗的左括号更多 此时才可以append右括号)
+     * @param left
+     * @param right
+     * @param ans
+     * @param path
+     */
     private void dfs(int left, int right, LinkedList<String> ans, String path){
         if (left == 0 && right == 0){
             ans.add(path);
@@ -47,7 +56,7 @@ public class Q22 {
     }
 
     public static void main(String[] args){
-        Q22 q = new Q22();
+        Q22括号生成 q = new Q22括号生成();
         List<String> l = q.generateParenthesis(3);
         System.out.println(l);
     }
