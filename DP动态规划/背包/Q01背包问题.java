@@ -1,4 +1,4 @@
-package DP动态规划;
+package DP动态规划.背包;
 
 /*
 https://mp.weixin.qq.com/s/FwIiPPmR18_AJO5eiidT6w
@@ -130,7 +130,7 @@ public class Q01背包问题 {
     }
 
     // 初始化数组时， 行 列都 + 1， 避免了分类讨论。
-    // item = 0时，即不放任何物品，dp[i][j] 为0； capacity = 0时，即容量为0，dp[i][j]为0
+    // item = 0时，即不放任何物品，dp[0][j] 为0； capacity = 0时，即容量为0，dp[i][0]为0
     // https://mp.weixin.qq.com/s/FwIiPPmR18_AJO5eiidT6w
     // dp[i][j] = Math.max(dp[i - 1][j], values[i - 1] + dp[i - 1][j - weights[i - 1]]);
     public static int maxValueDP2(int item, int capacity) {
@@ -139,9 +139,13 @@ public class Q01背包问题 {
         // i的下标从1开始  因为有i - 1的存在
         for (int i = 1; i <= item; i++) {
             // j的下标从0开始  dp[i][0] = 0 即容量为0的背包只能放入价值为0的东西
-            for (int j = 0; j <= capacity; j++) {
+            // 20241119更新: 这里感觉j的下标也可以从1开始  dp[i][0] = 0 即容量为0的背包只能放入价值为0的东西 上面做初始化的目的就是为了这里避免分类讨论
+            for (int j = 1; j <= capacity; j++) {
+                // 如果j-weight[i-1] >= 0 就进行动规 根据动态转移方程从上一次的结果推导本次结果
                 if (weights[i - 1] <= j) {
                     dp[i][j] = Math.max(dp[i - 1][j], values[i - 1] + dp[i - 1][j - weights[i - 1]]);
+//                    dp[i][j] = Math.max(dp[i - 1][j], values[i - 1] + dp[i][j - weights[i - 1]]); // 和01背包的区别就是拿了当前物品后，还可以再拿，所以下标i不用减一
+                // 否则就直接取上一行的数据即可 ==> 个人觉得后面的一维数组是从结果反推的为了节省空间的做法 并不是很好理解 因为直接复制上一行 无法对应真实的理解 是为了省空间而省空间
                 } else {
                     dp[i][j] = dp[i - 1][j];
                 }
@@ -165,6 +169,5 @@ public class Q01背包问题 {
             }
         }
         return dp[capacity];
-
     }
 }
