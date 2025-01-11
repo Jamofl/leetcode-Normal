@@ -114,18 +114,18 @@ public class Q297Serialize {
     // Encodes a tree to a single string.
     public String serialize2(TreeNode root) {
         // bfs traverse the tree
-        LinkedList<TreeNode> q = new LinkedList();
+        LinkedList<TreeNode> queue = new LinkedList();
         String ans = "";
-        q.add(root);
+        queue.add(root);
         TreeNode temp = null;
-        while (q.size() != 0){
-            temp = q.removeLast();
+        while (queue.size() != 0){
+            temp = queue.removeLast();
             if (temp == null){
                 ans += "null,";
                 continue;
             }
-            q.addFirst(temp.left);
-            q.addFirst(temp.right);
+            queue.addFirst(temp.left);
+            queue.addFirst(temp.right);
             ans += temp.val + ",";
         }
         return ans;
@@ -142,22 +142,22 @@ public class Q297Serialize {
         if (dataLst.getFirst().equals("null"))
             return null;
 
-        LinkedList<TreeNode> q = new LinkedList();
+        LinkedList<TreeNode> queue = new LinkedList();
         TreeNode tree = new TreeNode(Integer.parseInt(dataLst.removeFirst()));
-        q.addFirst(tree);
-        while (q.size() != 0){ // dataLst.size() != 0
-            TreeNode temp = q.removeLast();
+        queue.addFirst(tree);
+        while (queue.size() != 0){ // dataLst.size() != 0
+            TreeNode temp = queue.removeLast();
             String leftVal = dataLst.removeFirst();
             String rightVal = dataLst.removeFirst();
             if (!leftVal.equals("null")){
                 TreeNode left = new TreeNode(Integer.parseInt(leftVal));
                 temp.left = left;
-                q.addFirst(left);
+                queue.addFirst(left);
             }
             if (!rightVal.equals("null")){
                 TreeNode right = new TreeNode(Integer.parseInt(rightVal));
                 temp.right = right;
-                q.addFirst(right);
+                queue.addFirst(right);
             }
         }
         return tree;

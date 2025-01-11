@@ -16,15 +16,20 @@
 package 数据结构.LinkedList;
 
 public class Q234回文链表 {
-    class ListNode {
+    static class  ListNode {
         int val;
         ListNode next;
+
         ListNode(int x) {
-            val = x;
-            next = null;
+            this.val = x;
+            this.next = null;
+        }
+
+        ListNode(int x, ListNode next) {
+            this.val = x;
+            this.next = next;
         }
     }
-
     /*
     // 方法1 : 使用hash值  前序计算和后序计算hash值相同  说明为回文
     public boolean isPalindrome(ListNode head) {
@@ -65,7 +70,6 @@ public class Q234回文链表 {
         return true;
     }
 
-    /*
     // 方法3 : 快慢指针法  时间复杂度为O(1)
     // 整个流程可以分为以下五个步骤
     // 1.找到前半部分链表的尾节点。
@@ -74,7 +78,7 @@ public class Q234回文链表 {
     // 4.恢复链表。
     // 5.返回结果。
     boolean ans = true;
-    public boolean isPalindrome(ListNode head) {
+    public boolean isPalindrome3(ListNode head) {
         if (head == null || head.next == null)
             return true;
         ListNode slow = head;
@@ -86,12 +90,10 @@ public class Q234回文链表 {
         ListNode lastHalf = reverse(slow);
         ListNode firstHalf = head;
         while (firstHalf != null){
-            if ( firstHalf.val != lastHalf.val)
-            {
+            if ( firstHalf.val != lastHalf.val) {
                 ans = false;
                 break;
-            }
-            else{
+            } else{
                 firstHalf = firstHalf.next;
                 lastHalf = lastHalf.next;
             }
@@ -108,6 +110,13 @@ public class Q234回文链表 {
         head.next = null;
         return reversed;
     }
-     */
+
+    public static void main(String[] args) {
+        ListNode listNode = new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1))));
+        Q234回文链表 q = new Q234回文链表();
+        System.out.println(q.isPalindrome3(listNode));
+    }
+
+
 
 }

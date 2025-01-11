@@ -2,7 +2,7 @@ package 数据结构.Tree;
 
 import java.util.*;
 
-public class TreeTraversal迭代遍历 {
+public class TreeTraversal遍历迭代法 {
     public static class TreeNode {
         int val;
         TreeNode left;
@@ -22,14 +22,14 @@ public class TreeTraversal迭代遍历 {
 
     public List<Integer> levelOrder(TreeNode root){
         LinkedList<Integer> ans = new LinkedList<>();
-        Queue<TreeNode> q = new  LinkedList<>();
-        q.offer(root);
-        while (q.size() != 0){
-            TreeNode temp = q.poll();
+        Queue<TreeNode> queue = new  LinkedList<>();
+        queue.offer(root);
+        while (queue.size() != 0){
+            TreeNode temp = queue.poll();
             if (temp.left != null)
-                q.offer(temp.left);
+                queue.offer(temp.left);
             if (temp.right != null)
-                q.offer(temp.right);
+                queue.offer(temp.right);
             ans.addLast(temp.val);
         }
         return ans;
@@ -37,6 +37,9 @@ public class TreeTraversal迭代遍历 {
 
     // 中序遍历, 左-根-右
     // dfs(left),push-> dfs(left),push -> root.equals(null), return up level, pop -> print, dfs(right) ...
+    //                1.首先先将自己压入栈底，然后不断将左子节点压入栈中，直到左子节点为空。
+    //               2.然后弹出栈顶元素，也就是左子树为空的节点，将该节点的值添加到结果中；
+    //               3.最后将当前节点赋值为该节点的右子节点，然后重复外层循环；
     public List<Integer> inOrder (TreeNode root){
         Stack<TreeNode> stack = new Stack<>();
         List<Integer> ans = new LinkedList<>();
@@ -71,10 +74,10 @@ public class TreeTraversal迭代遍历 {
     }
 
 
-    // 后序遍历  困难版本
+    // 后序遍历  右-左-根  困难版本
     // too hard to remember and implement, but is the one most close to original call stack
-    // push, dfs(left) -> push, dfs(left) -> null, pop() ->  dfs(right) -> not null -> push, dfs(left) ... -> dfs(right)
-    //                                                                  -> null, pop(), print, pop(), dfs(right) ...
+    // push, dfs(left) -> push, dfs(left) -> null, pop() -> root.right != null -> push,  ->  dfs(right) : dfs(left) ...null ...pop() -> dfs(right)
+    //                                                   -> root.right == null -> print, pop(), dfs(right) ...
     public List<Integer> postOrder (TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         List<Integer> ans = new LinkedList<>();
@@ -118,7 +121,7 @@ public class TreeTraversal迭代遍历 {
     }
 
     public static void main(String[] args){
-        TreeTraversal迭代遍历 treetraverse = new TreeTraversal迭代遍历();
+        TreeTraversal遍历迭代法 treetraverse = new TreeTraversal遍历迭代法();
         List<Integer> ans = treetraverse.levelOrder(new TreeNode(3, new TreeNode(1, new TreeNode(2), new TreeNode(5)), new TreeNode(4)));
         System.out.println(ans);
     }

@@ -43,7 +43,8 @@ public class Q19删除链表的倒数第k个节点 {
     }
 
     // 双指针一遍扫描
-    // 1.找到倒数第k + 1个节点point 2.point.next = point.next.next;
+    // 1.找到倒数第k + 1个节点point
+    // 2.point.next = point.next.next;
     // 建立哨兵节点指向头结点，初始时l r双指针均指向哨兵节点，让l向右移动 n + 1个距离，即此时 l  r 相距 k + 1
     // 当r节点指向null时， l节点指向倒数第k个节点的前一个节点
     public ListNode removeNthFromEnd(ListNode head, int n) {

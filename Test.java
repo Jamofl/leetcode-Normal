@@ -5,79 +5,57 @@ import java.util.stream.Stream;
 
 
 public class Test {
-
-    /**
-     * 对于矩阵中的每一个字符 循环遍历该字符上下左右的元素 校验和当前word的首位字符是否匹配
-     * 结束条件: word长度校验完毕 返回成功 其余均返回失败
-     */
-
-
-    // 初始化一个数组用于遍历
-    public int[][] arounds = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-
-    public boolean exist(char[][] board, String word) {
-        int m = board.length;
-        int n = board[0].length;
-        boolean[][] visit = new boolean[m][n];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                // 避免了初始化的情况 直接进入dfs方法中判断 (首次访问 边界条件和是否访问直接满足 无需校验)
-                if (dfs(board, word, visit, 0, i, j)) {
-                    return true;
-                }
-            }
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode() {}
+        TreeNode(int val) {
+            this.val = val;
+            this.left = null;
+            this.right = null;
         }
-        return false;
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 
-    /**
-     * 整体逻辑:
-     *      对本次dfs 直接判断字符是否匹配
-     *      对下次dfs 提现判断数组边界和是否访问
-     *
-     * 简历一个本次dfs和下次dfs流程化的模板 然后把初始化的情况套进来 不要特判初始化的情况
-     *      兼容i == 0 j == 0的初始化讨论 让第一次也可以套用dfs循环的模板
-     *      对于第一次，相当于直接满足边界和是否访问的校验
-     *
-     * ==>
-     * @param board
-     * @param word
-     * @param visit
-     * @param index
-     * @param curI
-     * @param curJ
-     * @return
-     */
-    public boolean dfs(char[][] board, String word, boolean[][] visit, int index, int curI, int curJ) {
-        if (board[curI][curJ] != word.charAt(index)){
-            return false;
-        }
-        if (index == word.length() - 1) {
-            return true;
-        }
 
-        visit[curI][curJ] = true;
-        for (int[] around : arounds) {
-            int newI = curI + around[0];
-            int newJ = curJ + around[1];
-            // 校验边界 校验访问
-            if (newI >= 0 && newI <= board.length - 1 && newJ >= 0 && newJ <= board[0].length - 1
-                    && !visit[newI][newJ]) {
-                if (dfs(board, word, visit, index + 1, newI, newJ)) {
-                    return true;
-                }
-            }
+
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        if (root == null){
+            return new ArrayList<>();
         }
-        visit[curI][curJ] = false;
-        return false;
+        Queue<TreeNode> queue = new LinkedList<>();
+        List<List<Integer>> re = new ArrayList<>();
+        List<Integer> path = new ArrayList<>();
+        queue.offer(root);
+        while (queue.size() != 0){
+            int m = queue.size();
+
+            while (m > 0){
+                TreeNode pop = queue.poll();
+                path.add(pop.val);
+                if (pop.left != null){
+                    queue.add(pop.left);
+                }
+                if (pop.right != null){
+                    queue.add(pop.right);
+                }
+                m --;
+            }
+            re.add(new ArrayList(path));
+            path.clear();
+        }
+        return re;
+
     }
 
 
     public static void main(String[] args) {
-        char[][] board = {{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
-        Test test = new Test();
-        boolean see = test.exist(board, "SEE");
-        System.out.println(see);
+
 
     }
 

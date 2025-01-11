@@ -30,7 +30,7 @@ public class Q二叉树的后序遍历 {
                     stack.push(temp.left);
                 }
             }
-            else{
+            else {
                 re.add(temp.val);
             }
         }

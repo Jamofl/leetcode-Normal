@@ -8,7 +8,7 @@ import java.util.List;
  //Definition for a binary tree node.
 
 
-public class TreeTraversal递归遍历 {
+public class TreeTraversal遍历递归法 {
     public class TreeNode {
         int val;
         TreeNode left;
@@ -22,6 +22,11 @@ public class TreeTraversal递归遍历 {
         }
     }
 
+    /**
+     * 根 左 右
+     * @param tree
+     * @param lst
+     */
     private void preOrder(TreeNode tree, List<Integer> lst){
         if(tree == null)
             return;
@@ -30,6 +35,11 @@ public class TreeTraversal递归遍历 {
         preOrder(tree.right, lst);
     }
 
+    /**
+     * 左 根 右
+     * @param tree
+     * @param lst
+     */
     private void inOrder(TreeNode tree, List<Integer> lst){
         if(tree == null)
             return;
@@ -38,6 +48,11 @@ public class TreeTraversal递归遍历 {
         inOrder(tree.right, lst);
     }
 
+    /**
+     * 左 右 根
+     * @param tree
+     * @param lst
+     */
     private void postOrder(TreeNode tree, List<Integer> lst){
         if(tree == null)
             return;

@@ -21,22 +21,40 @@ public class Offer24反转链表 {
             val = x;
             next = null;
         }
+        ListNode(int x, ListNode next) {
+            val = x;
+            next = next;
+        }
     }
 
-    // 迭代法  维护一个cur 一个head   让head.next = cur
+    // 方法1 迭代法
+    // 维护一个cur 一个head   让head.next = cur
     public ListNode reverseList(ListNode head) {
-        ListNode cur = null;
+        ListNode reverseHead = null;
         while (head != null){
             ListNode temp = head.next;
-            head.next = cur;
-            cur = head;
+            head.next = reverseHead;
+            reverseHead = head;
             head = temp;
         }
-        return cur;
+        return reverseHead;
+    }
+
+    // 方法2 迭代构造法
+    // 反向构造 for循环遍历链表，通过new ListNode(val, next)来指定当前的val和下一个节点的值
+    public ListNode reverseList4(ListNode head) {
+        ListNode ans = null;
+        for (; head != null; head = head.next){
+            ans = new ListNode(head.val, ans);
+        }
+        return ans;
     }
 
 
-    // 递归法  假设head.next已经全部翻转完毕   让head.next.next 指向head本身，并让head.next = null
+
+    // 方法3 递归法 (不太好理解)
+    // 假设head.next已经全部翻转完毕
+    // 让head.next.next 指向head本身，并让head.next = null
     public ListNode reverseListRec(ListNode head) {
         if (head == null || head.next == null)
             return head;
@@ -49,18 +67,28 @@ public class Offer24反转链表 {
 
 
 
-    // 方法3 递归法 ： 迭代法的变形  更容易理解
+    // 方法4 递归法模拟法（好理解）
+    // 迭代法的变形  更容易理解
     public ListNode reverseList3(ListNode head) {
         return reverse(null, head);
     }
 
-    private ListNode reverse(ListNode pre, ListNode cur){
-        if (cur == null)
-            return pre;
+    /**
+     * reverseHead 已经翻转的部分
+     * head        尚未翻转的部分
+     * @param reverseHead
+     * @param head
+     * @return
+     */
+    private ListNode reverse(ListNode reverseHead, ListNode head){
+        // 尚未翻转的部分==null 则翻转完毕 返回已经翻转的部分
+        if (head == null)
+            return reverseHead;
 
-        ListNode temp = cur.next;
-        cur.next = pre;
-        return reverse(cur, temp);
+        ListNode temp = head.next;
+        head.next = reverseHead;
+        return reverse(head, temp);
     }
+
 
 }

@@ -1,7 +1,6 @@
-import javax.swing.plaf.basic.BasicScrollPaneUI;
-import java.util.HashMap;
+package 双指针;
+
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -18,7 +17,7 @@ import java.util.Set;
  * 你能用 O(1)（即，常量）内存解决此问题吗？
  *
  */
-public class Q141 {
+public class Q141环形链表 {
     class ListNode {
         int val;
         ListNode next;

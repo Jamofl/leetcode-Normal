@@ -35,7 +35,7 @@ public class Q79单词搜索 {
      *      对本次dfs 直接判断字符是否匹配
      *      对下次dfs 提现判断数组边界和是否访问
      *
-     * 简历一个本次dfs和下次dfs流程化的模板 然后把初始化的情况套进来 不要特判初始化的情况
+     * 整理一个本次dfs和下次dfs流程化的模板 然后把初始化的情况套进来 不要特判初始化的情况
      *      兼容i == 0 j == 0的初始化讨论 让第一次也可以套用dfs循环的模板
      *      对于第一次，相当于直接满足边界和是否访问的校验
      *
@@ -56,6 +56,7 @@ public class Q79单词搜索 {
             return true;
         }
 
+        boolean re = false;
         visit[curI][curJ] = true;
         for (int[] around : arounds) {
             int newI = curI + around[0];
@@ -64,11 +65,12 @@ public class Q79单词搜索 {
             if (newI >= 0 && newI <= board.length - 1 && newJ >= 0 && newJ <= board[0].length - 1
                     && !visit[newI][newJ]) {
                 if (dfs(board, word, visit, index + 1, newI, newJ)) {
-                    return true;
+                    re = true; // 实际上 这一次访问完毕后也是需要还原visit的 不过由于命中true后会直接返回结果 不会再有后续的dfs了 所以这里不还原现场也是可以的
+                    break;
                 }
             }
         }
         visit[curI][curJ] = false;
-        return false;
+        return re;
     }
 }
