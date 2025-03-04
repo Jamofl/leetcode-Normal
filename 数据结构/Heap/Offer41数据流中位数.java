@@ -22,87 +22,46 @@ double findMedian() - 返回目前所有元素的中位数。
 package 数据结构.Heap;
 import java.util.*;
 
+/**
+ *  动态维护一个大顶堆和一个小顶堆，前者的最大元素始终小于后者的最小元素
+ *      添加元素: 大顶堆中的元素个数为m，小顶堆中的元素个数为n，始终保持m == n 或 m == n + 1;
+ *                  若两边元素一样多，则向大顶堆添加；若大顶堆元素多，则向小顶堆添加
+ *      寻找中位数: 若偶数个元素->大顶堆堆顶元素; 若奇数个元素->两个堆堆顶元素取平均
+ */
 public class Offer41数据流中位数 {
 
-    // 方法1
-    // 添加元素时，如果比大顶堆的堆顶元素大，就添加到小顶堆中；否则添加到大顶堆中。
-    // 添加完毕后需要动态的维护两个堆，若一个堆的元素个数是另一个堆的元素个数 + 2，需要迁移元素。
-    // 始终保持两个堆的元素个数相差1或相等
-    PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-    PriorityQueue<Integer> bigHeap = new PriorityQueue<>((Integer i, Integer j) -> j - i);
-    public int size;
-    /** initialize your data structure here. */
+    private PriorityQueue<Integer> bigHeap;
+    private PriorityQueue<Integer> smallHeap;
+
     public Offer41数据流中位数() {
-        size = 0;
+        bigHeap = new PriorityQueue<>((x, y) -> y - x); // 大顶堆
+        smallHeap = new PriorityQueue<>(); // 小顶堆
     }
 
     public void addNum(int num) {
-        // add num
-        int size1 = bigHeap.size();
-        int size2 = minHeap.size();
-        if (size1 == 0 && size2 == 0)
-            bigHeap.offer(num);
+        // 两边元素相等 向大顶堆中添加元素（先加到小顶堆 然后弹出堆顶元素加入到大顶堆 可以保证大顶堆中元素都小于小顶堆）
+        if (bigHeap.size() == smallHeap.size()){
+            smallHeap.offer(num);
+            bigHeap.offer(smallHeap.poll());
+        }
+        // 大顶堆中元素多一个 向小顶堆中添加元素（先加到大顶堆 然后弹出堆顶元素加入到小顶堆）
         else{
-            if (num > bigHeap.peek())
-                minHeap.offer(num);
-            else
-                bigHeap.offer(num);
+            bigHeap.offer(num);
+            smallHeap.offer(bigHeap.poll());
         }
-
-        // dynamically maintain the two heaps
-        size1 = bigHeap.size();
-        size2 = minHeap.size();
-        if (size1 == size2 + 2){
-            int temp = bigHeap.poll();
-            minHeap.offer(temp);
-        }
-        else if (size2 == size1 + 2){
-            int temp = minHeap.poll();
-            bigHeap.offer(temp);
-        }
-        size ++;
     }
 
     public double findMedian() {
-        if (size % 2 == 0)
-            return (double)(minHeap.peek() + bigHeap.peek()) / 2.0;
-        else {
-            if (bigHeap.size() > minHeap.size())
-                return bigHeap.peek();
-            else
-                return minHeap.peek();
+        if (bigHeap.size() == smallHeap.size()){
+            return ((double)(bigHeap.peek()) + (double)(smallHeap.peek())) / 2.0;
         }
-    }
-
-
-
-    // 方法2
-    // 动态的维护两个堆中的元素，始终保持大顶堆中的元素都比中位数小；
-    // 小顶堆中的元素都比中位数大；若出现元素个数相等的情况，永远向大顶堆中添加，保持大顶堆中多一个元素。
-
-    public void addNum2(int num) {
-        // 如果 两个堆中的元素个数相等，直接向bigHeap中添加元素（先向小顶堆中添加元素  然后将小顶堆中的元素移到大顶堆中）
-        if (bigHeap.size() == minHeap.size()){
-            minHeap.offer(num);
-            bigHeap.offer(minHeap.poll());
-        }
-        // 不相等，即bigHeap 中元素多了1个。先向bigHeap加一个元素，再将bigheap中元素弹出一个加入到minHeap
-        else{
-            bigHeap.offer(num);
-            minHeap.offer(bigHeap.poll());
-        }
-        size ++;
-    }
-
-    public double findMedian2() {
-        if (size % 2 == 0)
-            return (double)(minHeap.peek() + bigHeap.peek()) / 2.0;
         else{
             return bigHeap.peek();
         }
     }
 
     public static void main(String[] args){
+
         Offer41数据流中位数 o = new Offer41数据流中位数();
         o.addNum(-1);
         System.out.println(o.findMedian());

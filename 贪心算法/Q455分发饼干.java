@@ -35,18 +35,18 @@ import java.util.*;
 public class Q455分发饼干 {
 
     // 贪心模拟
-    // 先对两个数组进行排序， 然后遍历饼干，对于饼干i，保证分到胃口 <= i的最小的小朋友即可
-    public int findContentChildren(int[] g, int[] s) {
-        Arrays.sort(s);
-        Arrays.sort(g);
+    // 遍历小孩， 对于小孩i，找到能满足它胃口的最小的饼干即可
+    public int findContentChildren(int[] child, int[] cookie) {
+        Arrays.sort(cookie);
+        Arrays.sort(child);
 
         int index = 0;
-        for (int i = 0; i < s.length; i ++){
-            if (index == g.length)
-                return g.length;
+        for (int i = 0; i < cookie.length; i ++){
+            if (index == child.length)
+                return child.length;
 
-            int cookie = s[i];
-            if (g[index] <= cookie)
+            int tempCookie = cookie[i];
+            if (child[index] <= tempCookie)
                 index ++;
         }
         return index;

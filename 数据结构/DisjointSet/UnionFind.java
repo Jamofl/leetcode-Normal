@@ -2,6 +2,13 @@ package 数据结构.DisjointSet;
 
 import java.util.Arrays;
 
+
+/**
+ * cs61b 实现并查集
+ * 只使用一个数组维护根节点
+ *  当前值>=0 代表其根节点的值
+ *  当前值<0  代表其为根节点 -x的值代表其上链接着的节点数量
+ */
 public class UnionFind {
 
     private int[] arr;
@@ -27,15 +34,21 @@ public class UnionFind {
     }
 
     // return the root of m
+    // 递归法路径压缩
     public int find(int m){
-        if (arr[m] > 0)
-            return find(arr[m]);
-        else
-            return m;
+        //  >=0时  arr[m]存储的是根节点
+        if (arr[m] >= 0){
+            arr[m] = find(arr[m]);
+            return arr[m];
+        }
+        // <0时  当前节点就是根节点 arr[m]存储的是当前节点上所有子节点的个数
+        else{
+            return arr[m];
+        }
     }
 
-    // 路径压缩
-    public int findwithPathCompact(int m){
+    // 迭代法路径压缩
+    public int findwithPathCompactRecursion(int m){
         int root = m;
         while (arr[root] > 0)
             root = arr[root];

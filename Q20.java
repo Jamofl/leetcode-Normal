@@ -15,33 +15,38 @@ import java.util.Stack;
 
 class Q20 {
     public boolean isValid(String s) {
-        if(s == null)
+        if(s == null){
             return true;
-        else if(s.length() % 2 == 1)
+        }
+        if(s.length() % 2 == 1){
             return false;
+        }
 
-        HashMap map = new HashMap();
+        HashMap<Character,Character> map = new HashMap();
         map.put('(', ')');
         map.put('{', '}');
         map.put('[', ']');
 
-        Stack<Character> st = new Stack();
+        Stack<Character> stack = new Stack();
         for(int i = 0 ; i < s.length(); i ++){
             char ch = s.charAt(i);
-            if(ch == '(' || ch == '{' || ch == '[')
-                st.push(ch);
-            else if(ch == ')' || ch == '}' || ch == ']'){
-                if(st.empty())
+            // 如果是左括号 入栈
+            if(map.containsKey(ch)){
+                stack.push(ch);
+            }
+            // 如果是右括号 出栈并检查是否匹配
+            else{
+                if(stack.empty()){
                     return false;
-                char c = st.pop();
-
-                if((char)(map.get(c)) != ch)
+                }
+                char pop = stack.pop();
+                if((map.get(pop)) != ch)
                     return false;
             }
         }
-        if(!st.empty())
+        if(!stack.isEmpty()){
             return false;
+        }
         return true;
-
     }
 }

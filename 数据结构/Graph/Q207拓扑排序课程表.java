@@ -33,85 +33,85 @@ package 数据结构.Graph;
 import java.util.*;
 public class Q207拓扑排序课程表 {
 
-    // 建立图的数据结构  + DFS遍历
-    /*
-    private class Node{
-        public int val;
-        public int indegree;
-        public Set<Node> neighbors;
-        public Node(int val){
-            this.val = val;
-            this.neighbors = new HashSet<>();
-            this.indegree = 0;
-        }
+//    // 建立图的数据结构  + DFS遍历
+//
+//    private class Node{
+//        public int val;
+//        public int indegree;
+//        public Set<Node> neighbors;
+//        public Node(int val){
+//            this.val = val;
+//            this.neighbors = new HashSet<>();
+//            this.indegree = 0;
+//        }
+//
+//        public void addNeighbor(Node nei){
+//            this.neighbors.add(nei);
+//            nei.indegree ++;
+//        }
+//    }
+//
+//    public Map<Integer, Node> map;
+//    public int numCourses;
+//    public boolean canFinish(int numCourses, int[][] prerequisites) {
+//        if (prerequisites.length == 0)
+//            return true;
+//
+//        this.numCourses = numCourses;
+//        this.map = new HashMap<Integer, Node>();
+//        for (int i = 0; i < prerequisites.length; i ++){
+//            int[] prerequisite = prerequisites[i];
+//            int courseNum1 = prerequisite[0];
+//            int courseNum2 = prerequisite[1];
+//            if (courseNum1 == courseNum2)
+//                return false;
+//            Node course1;
+//            Node course2;
+//            if (map.containsKey(courseNum1))
+//                course1 = map.get(courseNum1);
+//            else{
+//                course1 = new Node(courseNum1);
+//                map.put(courseNum1, course1);
+//            }
+//
+//            if (map.containsKey(courseNum2))
+//                course2 = map.get(courseNum2);
+//            else{
+//                course2 = new Node(courseNum2);
+//                map.put(courseNum2, course2);
+//            }
+//            course2.addNeighbor(course1);
+//        }
+//        return topologicalCheck();
+//    }
+//
+//    private boolean topologicalCheck(){
+//        int[] visit = new int[numCourses];
+//        Arrays.fill(visit, -1);
+//        for (Map.Entry<Integer, Node> entry : map.entrySet()){
+//            Node course = entry.getValue();
+//            if (! dfs(course, visit))
+//                return false;
+//        }
+//        return true;
+//    }
+//
+//    private boolean dfs(Node course, int[] visit){
+//        if (visit[course.val] == 1)
+//            return true;
+//        else if (visit[course.val] == 0)
+//            return false;
+//        else{
+//            visit[course.val] = 0;
+//            for (Node nei : course.neighbors){
+//                if (! dfs(nei, visit))
+//                    return false;
+//            }
+//        }
+//        visit[course.val] = 1;
+//        return true;
+//    }
 
-        public void addNeighbor(Node nei){
-            this.neighbors.add(nei);
-            nei.indegree ++;
-        }
-    }
-
-    public Map<Integer, Node> map;
-    public int numCourses;
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
-        if (prerequisites.length == 0)
-            return true;
-
-        this.numCourses = numCourses;
-        this.map = new HashMap<Integer, Node>();
-        for (int i = 0; i < prerequisites.length; i ++){
-            int[] prerequisite = prerequisites[i];
-            int courseNum1 = prerequisite[0];
-            int courseNum2 = prerequisite[1];
-            if (courseNum1 == courseNum2)
-                return false;
-            Node course1;
-            Node course2;
-            if (map.containsKey(courseNum1))
-                course1 = map.get(courseNum1);
-            else{
-                course1 = new Node(courseNum1);
-                map.put(courseNum1, course1);
-            }
-
-            if (map.containsKey(courseNum2))
-                course2 = map.get(courseNum2);
-            else{
-                course2 = new Node(courseNum2);
-                map.put(courseNum2, course2);
-            }
-            course2.addNeighbor(course1);
-        }
-        return topologicalCheck();
-    }
-
-    private boolean topologicalCheck(){
-        int[] visit = new int[numCourses];
-        Arrays.fill(visit, -1);
-        for (Map.Entry<Integer, Node> entry : map.entrySet()){
-            Node course = entry.getValue();
-            if (! dfs(course, visit))
-                return false;
-        }
-        return true;
-    }
-
-    private boolean dfs(Node course, int[] visit){
-        if (visit[course.val] == 1)
-            return true;
-        else if (visit[course.val] == 0)
-            return false;
-        else{
-            visit[course.val] = 0;
-            for (Node nei : course.neighbors){
-                if (! dfs(nei, visit))
-                    return false;
-            }
-        }
-        visit[course.val] = 1;
-        return true;
-    }
-     */
 
 
     // 方法2 邻接表 + DFS遍历   O(M + N)
@@ -143,12 +143,19 @@ public class Q207拓扑排序课程表 {
         return true;
     }
 
+
+    /**
+     * boolean表示是否可达
+     * @param visit
+     * @param course
+     * @return
+     */
     public boolean dfs(int[] visit, int course){
         if (visit[course] == 1) // 被其他节点开始的dfs访问过了 直接返回true
             return true;
         else if (visit[course] == 0) // 被当前节点开始的dfs访问过了，说明存在环形，返回false
             return false;
-        else{
+        else { // -1 未访问过
             visit[course] = 0; // 置为正在访问
             for (Integer neighbor : adajcentList.get(course)){
                 if (!dfs(visit, neighbor))
@@ -161,14 +168,14 @@ public class Q207拓扑排序课程表 {
 
 
 
-    /*
+
     // 方法3  邻接表 + BFS遍历
     // 维护一个队列，将入度为0的点加入队列中，每次从队列中移除一个顶点，并将它所有的邻居顶点的入度减一。
     // 若该邻居顶点的入度为0，也加入队列中。当队列为空时，若剩余课程数量不为0，说明仍存在不可达课程
-    List<List<Integer>> adajcentList;
-    int[] indegrees;
+    List<List<Integer>> adajcentList2;
+    int[] indegrees;  // 入度 为0时说明可以当前课程可达
     int numCourses;
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
+    public boolean canFinish3(int numCourses, int[][] prerequisites) {
         if (prerequisites.length == 0)
             return true;
 
@@ -187,7 +194,7 @@ public class Q207拓扑排序课程表 {
     }
 
     public boolean bfs(){
-        Queue<Integer> q = new 数据结构.LinkedList<>();
+        Queue<Integer> q = new LinkedList<>();
         for (int i = 0; i < numCourses; i ++){
             if (indegrees[i] == 0)
                 q.offer(i);
@@ -204,7 +211,7 @@ public class Q207拓扑排序课程表 {
         }
         return remainingCourse == 0;
     }
-     */
+
 
 
     public static void main(String[] args){

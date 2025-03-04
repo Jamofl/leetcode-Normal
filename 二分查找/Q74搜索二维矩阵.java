@@ -5,22 +5,24 @@
 每行中的整数从左到右按升序排列。
 每行的第一个整数大于前一行的最后一个整数。
  */
-package Array数组;
+package 二分查找;
 
 public class Q74搜索二维矩阵 {
 
-    /*
-    O(LOG(M * N))
-    把该矩阵当成一个虚拟的一维数组来看待。二分时进行下标的转换。 x = i * n + j;
-    推出 i = x / n; j = x % n;
 
+
+
+    /**
+     *     O(LOG(M * N))
+     *     把该矩阵当成一个虚拟的一维数组来看待。二分时进行下标的转换。 x = i * n + j;
+     *     推出 i = x / n; j = x % n;
+     */
     public int m;
     public int n;
     public boolean searchMatrix(int[][] matrix, int target) {
         m = matrix.length;
         n = matrix[0].length;
-        return (binarySearch(matrix, target) == -1) ? false : true;
-
+        return binarySearch(matrix, target) != -1;
     }
 
     public int binarySearch(int[][] matrix, int target){
@@ -39,5 +41,5 @@ public class Q74搜索二维矩阵 {
         }
         return -1;
     }
-     */
+
 }

@@ -1,3 +1,5 @@
+package 数据结构.Heap;
+
 import java.util.*;
 public class FindKthLargestQ215 {
 
@@ -45,7 +47,7 @@ public class FindKthLargestQ215 {
     }
 
 
-    // 方法2  小顶堆
+    // 方法2  小顶堆 NlogN
     public int findKthLargest2(int[] nums, int k) {
         PriorityQueue<Integer> pq = new PriorityQueue<>(); // small heap
 
@@ -104,10 +106,14 @@ public class FindKthLargestQ215 {
             return heap[0];
         }
 
+
+        /**
+         * 这里的offer方法比较特殊 直接用新元素替换堆顶元素 相当于是一出一进 堆的整体大小保持不变
+         * @param num
+         */
         public void offer(int num){
             heap[0] = num;
             sink(0);
-//            heapify();
         }
 
     }
@@ -119,12 +125,10 @@ public class FindKthLargestQ215 {
             heapNums[i] = nums[i];
 
         Heap heap = new Heap(heapNums, k);
-        // System.out.println(Arrays.toString(heap.heap));
 
         for (int i = k; i < n; i ++){
             if (nums[i] > heap.peek())
                 heap.offer(nums[i]);
-            // System.out.println(Arrays.toString(heap.heap));
         }
         return heap.peek();
     }
@@ -133,8 +137,8 @@ public class FindKthLargestQ215 {
 
     public static void main(String[] args){
         FindKthLargestQ215 f = new FindKthLargestQ215();
-        int[] nums = new int[]{3,2,3,1,2,4,5,5,6};
-        int r = f.findKthLargest(nums, 4);
+        int[] nums = new int[]{3,2,1,5,6,4};
+        int r = f.findKthLargest3(nums, 2);
         System.out.println(r);
     }
 

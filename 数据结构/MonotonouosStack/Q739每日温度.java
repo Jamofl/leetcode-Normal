@@ -8,15 +8,15 @@
  */
 package 数据结构.MonotonouosStack;
 import java.util.*;
-public class Q739 {
-    public int[] dailyTemperatures(int[] T) {
+public class Q739每日温度 {
+    public int[] dailyTemperatures(int[] temperatures) {
         Stack<Integer> stack = new Stack();
-        int n = T.length;
+        int n = temperatures.length;
         int[] ans = new int[n];
         for(int i = 0; i < n; i ++){
-            while(stack.size() != 0 && T[stack.peek()] < T[i]){
-                ans[stack.peek()] = i - stack.peek();
-                stack.pop();
+            while(stack.size() != 0 && temperatures[stack.peek()] < temperatures[i]){
+                int pop = stack.pop();
+                ans[pop] = i - pop;
             }
             stack.push(i);
         }

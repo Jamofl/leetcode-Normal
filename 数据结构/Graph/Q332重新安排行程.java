@@ -25,44 +25,41 @@ import java.util.*;
 import java.util.List;
 
 public class Q332重新安排行程 {
-
-    public Map<String, PriorityQueue<String>> adjacent = new HashMap<>();
-    public List<String> ans = new LinkedList<>();
-
-
-    // 维护一个PQ，每次都先弹出字典序最小的那个邻居节点
-    // dfs遍历该图，返回dfs后序遍历的结果，然后将该结果逆序
     public List<String> findItinerary(List<List<String>> tickets) {
+        Map<String, PriorityQueue<String>> map = new HashMap<>();
+        LinkedList<String> ans = new LinkedList<>();
         for (List<String> ticket : tickets){
             String src = ticket.get(0);
-            String dst = ticket.get(1);
-            if (adjacent.getOrDefault(src, null) == null){
-                PriorityQueue<String> nei = new PriorityQueue<>();
-                nei.add(dst);
-                adjacent.put(src, nei);
+            String dest = ticket.get(1);
+            if (map.getOrDefault(src, null) == null){
+                map.put(src, new PriorityQueue<>());
             }
-            else
-                adjacent.get(src).add(dst);
+            map.get(src).offer(dest);
         }
-        dfs("S");
-        Collections.reverse(ans);
+        dfs("JFK", ans, map);
         return ans;
     }
 
-    private void dfs(String cur){
-        while (adjacent.containsKey(cur) && adjacent.get(cur).size() > 0) {
-            String temp = adjacent.get(cur).poll();
-            dfs(temp);
+    private void dfs(String cur, LinkedList<String> ans, Map<String, PriorityQueue<String>> map){
+        while (map.containsKey(cur) && !map.get(cur).isEmpty()){
+            String nei = map.get(cur).poll();
+            dfs(nei, ans, map);
         }
-        ans.add(cur);
+        ans.addFirst(cur);
     }
 
     public static void main(String[] args){
         Q332重新安排行程 q = new Q332重新安排行程();
+        ArrayList<Integer> l = new ArrayList<>();
+        l.add(1);
+        l.add(2);
+        l.add(3);
+
         List<List<String>> tickets = new ArrayList<>();
-        tickets.add(List.of("S", "B"));
-        tickets.add(List.of("B", "S"));
-        tickets.add(List.of("S", "A"));
+        tickets.add(List.of("JFK", "B"));
+        tickets.add(List.of("B", "JFK"));
+        tickets.add(List.of("JFK", "A"));
+        tickets.add(List.of("A", "JFK"));
         List<String> ans = q.findItinerary(tickets);
         System.out.println(ans.toString());
     }

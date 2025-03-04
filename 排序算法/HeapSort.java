@@ -47,6 +47,10 @@ public class HeapSort {
 
 
     private void heapify(int[] nums, int end) {
+        // 因为是通过下沉来进行堆化的 下沉后 只有数组末尾的元素可以保证是最小的 不会再改动的
+        // 而数组前面的元素很可能已经被替换了 此时如果正序遍历 可能会漏掉某些元素 所以需要倒叙下沉来建堆
+        // 可以参考数组-4,0,7,4,9 如果正序下沉堆化 在对-4下沉后 7跑到了队首 由于i++ 那么7永远无法再次下沉了
+
         for (int i = end; i >= 0; i--) {
             sink(nums, i, end);
         }
@@ -60,12 +64,13 @@ public class HeapSort {
             // 交换【堆顶元素】 和 【数组末尾元素】
             swap(nums, 0, i);
             // 把【当前元素】下沉到适当位置，堆的边界变为i-1。  本质就是重新堆化一下 保持堆顶仍为最大元素
+            // 当i = 0 时，边界变为 -1 此时sink会直接return
             sink(nums, 0, i - 1);
         }
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{32, 15, 1,4,7,9,0};
+        int[] nums = new int[]{-4,0,7,4,9};
         HeapSort h = new HeapSort();
         h.heapSort(nums);
         System.out.println(Arrays.toString(nums));

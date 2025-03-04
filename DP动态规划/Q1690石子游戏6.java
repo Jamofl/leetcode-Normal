@@ -53,7 +53,7 @@ public class Q1690石子游戏6 {
 
         for (int i = n - 2; i >= 0; i --){
             for (int j = i + 2; j < n; j ++){
-                int tempSum = sums[j] - sums[i] + stones[i];
+                int tempSum = sums[j] - sums[i] + stones[i];// 即区间[i,j]这些石子的和.有了这个和，可以轻松的计算出不带i或者不带j的和
                 dp[i][j] = Math.max(tempSum - stones[i] - dp[i + 1][j], tempSum - stones[j] - dp[i][j - 1]);
             }
         }

@@ -38,7 +38,7 @@ grid[i][j] 的值为 '0' 或 '1'
 package 数据结构.DisjointSet;
 import java.util.*;
 
-public class Q200 {
+public class Q200岛屿数量 {
 
     // Solution 1:并查集
     private class UnionFind{
@@ -192,7 +192,7 @@ public class Q200 {
 
 
     public static void main(String[] args){
-        Q200 q = new Q200();
+        Q200岛屿数量 q = new Q200岛屿数量();
         char[][] grid = new char[][]{{'1','1','1'}, {'1','1','0'}, {'0','0','1'}};
         int r = q.numIslands(grid);
         System.out.println(r);

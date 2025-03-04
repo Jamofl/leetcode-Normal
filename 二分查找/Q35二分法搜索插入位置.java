@@ -21,7 +21,7 @@
 输入: [1,3,5,6], 0
 输出: 0
  */
-package Array数组;
+package 二分查找;
 
 public class Q35二分法搜索插入位置 {
 
